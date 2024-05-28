@@ -1,0 +1,57 @@
+name: Workflow
+
+run-name: ${{ github.actor }} has push
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ "21.6.0" ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: install dependencies Node Package Manager
+        run: npm ci
+
+      - name: Run eslint
+        run: npm run lint
+
+      - name: Fix Prettier
+        run: npm run format:fix
+
+      - name: Run Prettier
+        run: npm run format
+
+      - name: build
+        run: npm run build --if-present
+
+      # - name: test
+      #  run: npm test
+
+      - name: Build image
+        run : docker build -t gamebotsfrontimage:0.0.1 .
+
+      - name: Login to dockerhub
+        run : docker login -u ${{secrets.CD_DOCKER_USERNAME}} -p ${{secrets.CD_DOCKER_PASSWORD}}
+
+      - name: Prepare to push to docker
+        run: docker tag gamebotsfrontimage:0.0.1 ${{secrets.CD_DOCKER_USERNAME}}/gamebotsfrontimage:0.0.1
+
+      - name: Push to docker
+        run: docker push ${{secrets.CD_DOCKER_USERNAME}}/gamebotsfrontimage:0.0.1
