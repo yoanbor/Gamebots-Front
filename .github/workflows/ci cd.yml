@@ -29,11 +29,8 @@ jobs:
       - name: install dependencies Node Package Manager
         run: npm ci
 
-      - name: Fix Prettier
-        run: npm run format:fix
-
-      - name: Run Prettier
-        run: npm run format
+      - name: run Prettier
+        run: npm run prettier
 
       - name: build
         run: npm run build --if-present
