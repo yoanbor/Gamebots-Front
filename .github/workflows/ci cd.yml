@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies Node Package Manager
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Run Prettier
         run: npm run prettier
