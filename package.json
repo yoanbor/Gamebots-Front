@@ -1,35 +1,26 @@
 {
-  "name": "gamebots-front",
+  "name": "gamebots",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prepare": "husky install",
-    "prettier": "prettier --write ."
+    "dev": "gamebots/node_modules/.bin/vite",
+    "build": "gamebots/node_modules/.bin/vite build",
+    "lint": "gamebots/node_modules/.bin/eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "gamebots/node_modules/.bin/vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
-    "globals": "^15.3.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "prettier": "3.2.5",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
-  },
-  "lint-staged": {
-    "*.{js,css,ts,tsx,jsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
   }
 }
