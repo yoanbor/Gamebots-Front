@@ -5,6 +5,7 @@ const createConversationController = async (conversation) => {
         return createConversation(conversation);
     } catch (error) {
         console.log("erreur lors de la création de la conversation");
+        throw error;
     }
 }
 
