@@ -1,0 +1,106 @@
+.register {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+
+  .register-left-part {
+
+    #big-logo {
+      width: 600px;
+      height: 600px;
+    }
+
+    .img-gamebot, .message-user {
+      margin-right: 15px;
+    }
+
+    .msg {
+      display: flex;
+      align-items: center;
+
+      #gamebot-h4 {
+        text-transform: uppercase;
+      }
+
+      h4 {
+        margin-bottom: 5px;
+      }
+    }
+
+    #logo-msg {
+      width: 60px;
+      height: 60px;
+    }
+
+  }
+
+  .register-right-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1 {
+      text-transform: uppercase;
+      color: $secondaryColor-Medium;
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 60px;
+      margin-bottom: 90px;
+    }
+
+    .form-container {
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 131px;
+
+        .labels {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 30px;
+
+          .inputs {
+            width: 466.11px;
+            height: 48px;
+            border-radius: 8px;
+          }
+        }
+
+        .checkbox {
+          width: 466.11px;
+          color: $secondaryColor-Medium;
+
+          input[type="checkbox"] {
+            margin-top: 20px;
+            margin-right: 8px;
+          }
+        }
+
+        input[type="submit"] {
+          height: 65px;
+          width: 194.05px;
+          border-radius: 8px;
+          color: $white;
+          background-color: $primaryColor-Medium;
+          border-color: $primaryColor-Medium;
+          margin-top: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #need-to-login {
+      color: $secondaryColor-Medium;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+
+
+  }
+}

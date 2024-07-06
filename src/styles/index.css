@@ -4,4 +4,89 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
+.register {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+.register .register-left-part #big-logo {
+  width: 600px;
+  height: 600px;
+}
+.register .register-left-part .img-gamebot, .register .register-left-part .message-user {
+  margin-right: 15px;
+}
+.register .register-left-part .msg {
+  display: flex;
+  align-items: center;
+}
+.register .register-left-part .msg #gamebot-h4 {
+  text-transform: uppercase;
+}
+.register .register-left-part .msg h4 {
+  margin-bottom: 5px;
+}
+.register .register-left-part #logo-msg {
+  width: 60px;
+  height: 60px;
+}
+.register .register-right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.register .register-right-part h1 {
+  text-transform: uppercase;
+  color: #155E75;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 60px;
+  margin-bottom: 90px;
+}
+.register .register-right-part .form-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 131px;
+}
+.register .register-right-part .form-container .form .labels {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.register .register-right-part .form-container .form .labels .inputs {
+  width: 466.11px;
+  height: 48px;
+  border-radius: 8px;
+}
+.register .register-right-part .form-container .form .checkbox {
+  width: 466.11px;
+  color: #155E75;
+}
+.register .register-right-part .form-container .form .checkbox input[type=checkbox] {
+  margin-top: 20px;
+  margin-right: 8px;
+}
+.register .register-right-part .form-container .form input[type=submit] {
+  height: 65px;
+  width: 194.05px;
+  border-radius: 8px;
+  color: rgb(243, 243, 243);
+  background-color: #F97316;
+  border-color: #F97316;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.register .register-right-part #need-to-login {
+  color: #155E75;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=index.css.map */
