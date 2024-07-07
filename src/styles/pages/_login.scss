@@ -1,0 +1,250 @@
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+
+  .login-left-part {
+
+    .img-avatars {
+      position: absolute;
+    }
+
+    #avatar-Bangalore {
+      top: 4%;
+      left: 35%;
+
+      @media screen and (max-width: 1250px) {
+        display: none
+      }
+    }
+
+    #avatar-Bloodhunt {
+      top: 63%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media screen and (max-width: 1250px) {
+        display: none
+      }
+    }
+
+    #avatar-Lifeline {
+      top: 78%;
+      left: 6%;
+
+      @media screen and (max-width: 1250px) {
+        display: none
+      }
+    }
+
+    #avatar-Pathfinder {
+      top: 22%;
+      left: 3%;
+
+      @media screen and (max-width: 1250px) {
+        display: none
+      }
+    }
+
+    #big-logo {
+      width: 600px;
+      height: 600px;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+
+      @media screen and (max-width: 1250px) {
+        height: 450px;
+        width: 345px;
+      }
+
+      @media screen and (max-width: 900px) {
+        position: static;
+        width: 300px;
+        height: 300px;
+        transform: translate(0, 0);
+        margin-top: 50px;
+      }
+    }
+
+    #msg-gamebot {
+      top: 46px;
+      left: 46px;
+
+      @media screen and (max-width: 1250px) {
+        display: none
+      }
+    }
+
+    #msg-user {
+      top: 80%;
+      left: 31%;
+
+      @media screen and (max-width: 1250px) {
+        display: none
+      }
+    }
+
+    .message-user {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .img-gamebot, .message-user {
+      margin-right: 15px;
+    }
+
+    .msg {
+      display: flex;
+      align-items: center;
+      position: absolute;
+
+      .message-gamebot h4 {
+        text-transform: uppercase;
+      }
+
+      h4 {
+        margin-bottom: 5px;
+      }
+    }
+
+    #logo-msg {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  .login-right-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      color: $secondaryColor-Medium;
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 60px;
+      margin-bottom: 90px;
+      font-family: $displayFont-H2;
+
+      @media screen and (max-width: 900px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .form-container {
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 131px;
+
+        @media screen and (max-width: 900px) {
+          margin-bottom: 50px;
+        }
+
+        .labels {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 30px;
+
+          @media screen and (max-width: 900px) {
+            margin-bottom: 10px;
+          }
+
+          .label {
+            z-index: 10;
+            transform: translateX(10px);
+            background-color: white;
+          }
+
+          #label-pseudo {
+            padding-left: 7px;
+            max-width: 15%;
+          }
+
+          #label-email {
+            padding-left: 7px;
+            max-width: 13%;
+          }
+
+          #label-password {
+            padding-left: 7px;
+            max-width: 24%;
+          }
+
+          #label-confirmPassword {
+            padding-left: 7px;
+            max-width: 49%;
+          }
+
+          .inputs {
+            width: 466.11px;
+            height: 48px;
+            border-radius: 8px;
+            padding: 0 0 0 15px;
+            transform: translateY(-10px);
+          }
+        }
+
+        .field, .field-password {
+          position: relative;
+        }
+
+        .password-toggle svg, .password-toggle svg {
+          position: absolute;
+          top: 20px;
+          right: 15px;
+          color: #CBD5E1;
+          cursor: pointer;
+        }
+
+        .checkbox {
+          width: 466.11px;
+          color: $secondaryColor-Medium;
+
+          input[type="checkbox"] {
+            margin-top: 20px;
+            margin-right: 8px;
+          }
+        }
+
+        input[type="submit"] {
+          height: 65px;
+          width: 194.05px;
+          border-radius: 8px;
+          color: $white;
+          background-color: $primaryColor-Medium;
+          border-color: $primaryColor-Medium;
+          margin-top: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    p {
+      color: #23222D;
+    }
+
+    #need-to-login {
+      color: $secondaryColor-Medium;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
