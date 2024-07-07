@@ -83,22 +83,15 @@ function Login() {
                             </div>
                         </div>
 
-                        <label className={"checkbox"}>
-                            <input type={'checkbox'} id={"CGU"}/>
-                            Veuillez accepter les
-                            <NavLink to={'/CGU'} id={"need-to-login"}> Conditions Générales
-                                d’Utilisations</NavLink> et
-                            les
-                            <NavLink to={'/MentionsLegales'} id={"need-to-login"}> Mentions Légales</NavLink>
-                        </label>
-
-                        <input type={'submit'} id={"login"} value="S'inscrire"/>
+                        <input type={'submit'} id={"login"} value="Se connecter"/>
+                        <p id={"lostPassword"}>Mot de passe oublié ?</p>
                     </form>
                 </div>
 
                 <p>
-                    Vous avez déjà un compte ?
-                    <NavLink to={'/Login'} id={"need-to-login"}> Connectez vous</NavLink>
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    Vous n'avez pas de compte ?
+                    <NavLink to={'/Register'} id={"need-to-register"}> Inscrivez vous</NavLink>
                 </p>
             </div>
         </div>

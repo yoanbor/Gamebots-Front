@@ -169,11 +169,6 @@
             background-color: white;
           }
 
-          #label-pseudo {
-            padding-left: 7px;
-            max-width: 15%;
-          }
-
           #label-email {
             padding-left: 7px;
             max-width: 13%;
@@ -182,11 +177,6 @@
           #label-password {
             padding-left: 7px;
             max-width: 24%;
-          }
-
-          #label-confirmPassword {
-            padding-left: 7px;
-            max-width: 49%;
           }
 
           .inputs {
@@ -202,22 +192,12 @@
           position: relative;
         }
 
-        .password-toggle svg, .password-toggle svg {
+        .password-toggle svg {
           position: absolute;
           top: 20px;
           right: 15px;
           color: #CBD5E1;
           cursor: pointer;
-        }
-
-        .checkbox {
-          width: 466.11px;
-          color: $secondaryColor-Medium;
-
-          input[type="checkbox"] {
-            margin-top: 20px;
-            margin-right: 8px;
-          }
         }
 
         input[type="submit"] {
@@ -230,6 +210,16 @@
           margin-top: 50px;
           cursor: pointer;
         }
+
+        #lostPassword {
+          color: #9CA3AF;
+          cursor: pointer;
+          margin-top: 10px;
+        }
+
+        #lostPassword:hover {
+          color: $secondaryColor-Low;
+        }
       }
     }
 
@@ -237,7 +227,7 @@
       color: #23222D;
     }
 
-    #need-to-login {
+    #need-to-register {
       color: $secondaryColor-Medium;
       font-weight: bold;
       text-decoration: none;

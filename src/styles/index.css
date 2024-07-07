@@ -412,10 +412,6 @@ li {
   transform: translateX(10px);
   background-color: white;
 }
-.login .login-right-part .form-container .form .labels #label-pseudo {
-  padding-left: 7px;
-  max-width: 15%;
-}
 .login .login-right-part .form-container .form .labels #label-email {
   padding-left: 7px;
   max-width: 13%;
@@ -423,10 +419,6 @@ li {
 .login .login-right-part .form-container .form .labels #label-password {
   padding-left: 7px;
   max-width: 24%;
-}
-.login .login-right-part .form-container .form .labels #label-confirmPassword {
-  padding-left: 7px;
-  max-width: 49%;
 }
 .login .login-right-part .form-container .form .labels .inputs {
   width: 466.11px;
@@ -438,20 +430,12 @@ li {
 .login .login-right-part .form-container .form .field, .login .login-right-part .form-container .form .field-password {
   position: relative;
 }
-.login .login-right-part .form-container .form .password-toggle svg, .login .login-right-part .form-container .form .password-toggle svg {
+.login .login-right-part .form-container .form .password-toggle svg {
   position: absolute;
   top: 20px;
   right: 15px;
   color: #CBD5E1;
   cursor: pointer;
-}
-.login .login-right-part .form-container .form .checkbox {
-  width: 466.11px;
-  color: #155E75;
-}
-.login .login-right-part .form-container .form .checkbox input[type=checkbox] {
-  margin-top: 20px;
-  margin-right: 8px;
 }
 .login .login-right-part .form-container .form input[type=submit] {
   height: 65px;
@@ -463,10 +447,18 @@ li {
   margin-top: 50px;
   cursor: pointer;
 }
+.login .login-right-part .form-container .form #lostPassword {
+  color: #9CA3AF;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.login .login-right-part .form-container .form #lostPassword:hover {
+  color: #0891B2;
+}
 .login .login-right-part p {
   color: #23222D;
 }
-.login .login-right-part #need-to-login {
+.login .login-right-part #need-to-register {
   color: #155E75;
   font-weight: bold;
   text-decoration: none;
