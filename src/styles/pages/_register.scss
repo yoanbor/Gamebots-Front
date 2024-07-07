@@ -5,9 +5,51 @@
 
   .register-left-part {
 
+    .img-avatars {
+    position: absolute;
+    }
+
+    #avatar-Bangalore {
+      top: 46px;
+      left: 603px;
+    }
+
+    #avatar-Bloodhunt {
+      top: 680px;
+      left: 805px;
+    }
+
+    #avatar-Lifeline {
+      top: 846px;
+      left: 131px;
+    }
+
+    #avatar-Pathfinder {
+      top: 242px;
+      left: 210px;
+    }
+
     #big-logo {
       width: 600px;
       height: 600px;
+      top: 181px;
+      left: 266px;
+    }
+
+    #msg-gamebot {
+      top: 46px;
+      left: 46px;
+    }
+
+    #msg-user {
+      top: 866px;
+      left: 600px;
+    }
+
+    .message-user {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
     }
 
     .img-gamebot, .message-user {
@@ -17,8 +59,9 @@
     .msg {
       display: flex;
       align-items: center;
+      position: absolute;
 
-      #gamebot-h4 {
+      .message-gamebot h4 {
         text-transform: uppercase;
       }
 
@@ -48,6 +91,7 @@
       font-weight: bold;
       line-height: 60px;
       margin-bottom: 90px;
+      font-family: $displayFont-H2;
     }
 
     .form-container {
@@ -63,11 +107,51 @@
           flex-direction: column;
           margin-bottom: 30px;
 
+          .label {
+            z-index: 10;
+            transform: translateX(10px);
+            background-color: white;
+          }
+
+          #label-pseudo {
+            padding-left: 7px;
+            max-width: 15%;
+          }
+
+          #label-email {
+            padding-left: 7px;
+            max-width: 13%;
+          }
+
+          #label-password {
+            padding-left: 7px;
+            max-width: 24%;
+          }
+
+          #label-confirmPassword {
+            padding-left: 7px;
+            max-width: 49%;
+          }
+
           .inputs {
             width: 466.11px;
             height: 48px;
             border-radius: 8px;
+            padding: 0 0 0 15px;
+            transform: translateY(-10px);
           }
+        }
+
+        .field, .field-password {
+          position: relative;
+        }
+
+        .password-toggle svg, .password-toggle svg {
+          position: absolute;
+          top: 20px;
+          right: 15px;
+          color: #CBD5E1;
+          cursor: pointer;
         }
 
         .checkbox {
@@ -93,14 +177,38 @@
       }
     }
 
+    p {
+      color: #23222D;
+    }
+
     #need-to-login {
       color: $secondaryColor-Medium;
       font-weight: bold;
       text-decoration: none;
     }
-
-
-
-
   }
 }
+
+@media (max-width: 1600px) {
+  .patients-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 15px;
+  }
+
+  @media (max-width: 1100px) {
+    .patients-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 15px;
+    }
+
+  }
+
+  @media (max-width: 700px) {
+    .patients-list {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+  }}
