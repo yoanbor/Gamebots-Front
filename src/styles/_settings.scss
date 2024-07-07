@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+
 $primaryColor-Lowest: #FFF7ED;
 $primaryColor-Lower: #FFEDD5;
 $primaryColor-Low: #FDBA74;
@@ -17,10 +27,46 @@ $secondaryColor-Hightest: #001E2A;
 $white: rgb(243, 243, 243);
 $black: rgb(12, 12, 12);
 
+$displayFont-H1: "font-1-bold", sans-serif;
+$displayFont-H2: "font-1-bold", sans-serif;
+$displayFont-H3: "font-1-bold", sans-serif;
+$displayFont-H4: "font-1-bold", sans-serif;
+$displayFont-H5: "font-1-bold", sans-serif;
+$displayFont-H6: "font-1-bold", sans-serif;
+
+$headingFont-H1: "font-1-bold", sans-serif;
+$headingFont-H2: "font-1-bold", sans-serif;
+$headingFont-H3: "font-1-bold", sans-serif;
+$headingFont-H4: "font-1-bold", sans-serif;
+$headingFont-H5: "font-1-bold", sans-serif;
+$headingFont-H6: "font-1-bold", sans-serif;
+
+$textFont-Large: "font-1", sans-serif;
+$textFont-Medium: "font-1", sans-serif;
+$textFont-Small: "font-1", sans-serif;
+$textFont-Smaller: "font-1", sans-serif;
+$textFont-Smallest: "font-1", sans-serif;
+
+$textBoldFont-Large: "font-1-bold", sans-serif;
+$textBoldFont-Medium: "font-1-bold", sans-serif;
+$textBoldFont-Small: "font-1-bold", sans-serif;
+$textBoldFont-Smaller: "font-1-bold", sans-serif;
+$textBoldFont-Smallest: "font-1-bold", sans-serif;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: $textFont-Medium;
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  color: #CBD5E1;
+  border-color: #CBD5E1;
 }
 
 li {
