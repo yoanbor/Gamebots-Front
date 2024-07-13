@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         errorElement: <PageError/>
     },
     {
-        path: 'account',
+        path: '/account',
         element: <Account/>,
     }
     ]);
