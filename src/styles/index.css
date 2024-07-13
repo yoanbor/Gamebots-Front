@@ -34,6 +34,132 @@ a:visited {
   color: initial;
 }
 
+.left-part .img-avatars {
+  position: absolute;
+}
+.left-part #avatar-Bangalore {
+  top: 4%;
+  left: 35%;
+}
+@media screen and (max-width: 1250px) {
+  .left-part #avatar-Bangalore {
+    display: none;
+  }
+}
+.left-part #avatar-Bloodhunt {
+  top: 63%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 1250px) {
+  .left-part #avatar-Bloodhunt {
+    display: none;
+  }
+}
+.left-part #avatar-Lifeline {
+  top: 78%;
+  left: 6%;
+}
+@media screen and (max-width: 1250px) {
+  .left-part #avatar-Lifeline {
+    display: none;
+  }
+}
+.left-part #avatar-Pathfinder {
+  top: 22%;
+  left: 3%;
+}
+@media screen and (max-width: 1250px) {
+  .left-part #avatar-Pathfinder {
+    display: none;
+  }
+}
+.left-part #big-logo {
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1250px) {
+  .left-part #big-logo {
+    height: 450px;
+    width: 345px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .left-part #big-logo {
+    position: static;
+    width: 300px;
+    height: 300px;
+    transform: translate(0, 0);
+    margin-top: 50px;
+  }
+}
+@media screen and (max-height: 1000px) {
+  .left-part #big-logo {
+    width: 400px;
+    height: 400px;
+  }
+}
+.left-part #msg-gamebot {
+  top: 46px;
+  left: 46px;
+}
+@media screen and (max-width: 1250px) {
+  .left-part #msg-gamebot {
+    display: none;
+  }
+}
+@media screen and (max-height: 600px) {
+  .left-part #msg-gamebot {
+    display: none;
+  }
+}
+.left-part #msg-user {
+  top: 80%;
+  left: 31%;
+}
+@media screen and (max-width: 1250px) {
+  .left-part #msg-user {
+    display: none;
+  }
+}
+@media screen and (max-height: 600px) {
+  .left-part #msg-user {
+    display: none;
+  }
+}
+.left-part .message-user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.left-part .img-gamebot, .left-part .message-user {
+  margin-right: 15px;
+}
+.left-part .msg {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.left-part .msg .message-gamebot h4 {
+  text-transform: uppercase;
+}
+.left-part .msg h4 {
+  margin-bottom: 5px;
+}
+.left-part #logo-msg {
+  width: 60px;
+  height: 60px;
+}
+@media screen and (max-width: 900px) {
+  .left-part {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @font-face {
   font-family: "font-1";
   src: url(../assets/fonts/Play-Regular.ttf);
@@ -78,131 +204,6 @@ a:visited {
 @media screen and (max-width: 900px) {
   .register {
     grid-template-columns: 1fr;
-  }
-}
-.register .register-left-part .img-avatars {
-  position: absolute;
-}
-.register .register-left-part #avatar-Bangalore {
-  top: 4%;
-  left: 35%;
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #avatar-Bangalore {
-    display: none;
-  }
-}
-.register .register-left-part #avatar-Bloodhunt {
-  top: 63%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #avatar-Bloodhunt {
-    display: none;
-  }
-}
-.register .register-left-part #avatar-Lifeline {
-  top: 78%;
-  left: 6%;
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #avatar-Lifeline {
-    display: none;
-  }
-}
-.register .register-left-part #avatar-Pathfinder {
-  top: 22%;
-  left: 3%;
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #avatar-Pathfinder {
-    display: none;
-  }
-}
-.register .register-left-part #big-logo {
-  width: 600px;
-  height: 600px;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #big-logo {
-    height: 450px;
-    width: 345px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .register .register-left-part #big-logo {
-    position: static;
-    width: 300px;
-    height: 300px;
-    transform: translate(0, 0);
-    margin-top: 50px;
-  }
-}
-@media screen and (max-height: 1000px) {
-  .register .register-left-part #big-logo {
-    width: 400px;
-    height: 400px;
-  }
-}
-.register .register-left-part #msg-gamebot {
-  top: 46px;
-  left: 46px;
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #msg-gamebot {
-    display: none;
-  }
-}
-@media screen and (max-height: 600px) {
-  .register .register-left-part #msg-gamebot {
-    display: none;
-  }
-}
-.register .register-left-part #msg-user {
-  top: 80%;
-  left: 31%;
-}
-@media screen and (max-width: 1250px) {
-  .register .register-left-part #msg-user {
-    display: none;
-  }
-}
-@media screen and (max-height: 600px) {
-  .register .register-left-part #msg-user {
-    display: none;
-  }
-}
-.register .register-left-part .message-user {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.register .register-left-part .img-gamebot, .register .register-left-part .message-user {
-  margin-right: 15px;
-}
-.register .register-left-part .msg {
-  display: flex;
-  align-items: center;
-  position: absolute;
-}
-.register .register-left-part .msg .message-gamebot h4 {
-  text-transform: uppercase;
-}
-.register .register-left-part .msg h4 {
-  margin-bottom: 5px;
-}
-.register .register-left-part #logo-msg {
-  width: 60px;
-  height: 60px;
-}
-@media screen and (max-width: 900px) {
-  .register .register-left-part {
-    display: flex;
-    justify-content: center;
   }
 }
 .register .register-right-part {
@@ -307,7 +308,7 @@ a:visited {
 }
 .register .register-right-part .form-container .form .checkbox {
   width: 466.11px;
-  color: #155E75;
+  color: #23222D;
 }
 .register .register-right-part .form-container .form .checkbox input[type=checkbox] {
   margin-top: 20px;
@@ -317,6 +318,9 @@ a:visited {
   .register .register-right-part .form-container .form .checkbox input[type=checkbox] {
     margin-top: 5px;
   }
+}
+.register .register-right-part .form-container .form .checkbox a {
+  color: #155E75;
 }
 .register .register-right-part .form-container .form input[type=submit] {
   height: 65px;
@@ -386,131 +390,6 @@ a:visited {
 @media screen and (max-width: 900px) {
   .login {
     grid-template-columns: 1fr;
-  }
-}
-.login .login-left-part .img-avatars {
-  position: absolute;
-}
-.login .login-left-part #avatar-Bangalore {
-  top: 4%;
-  left: 35%;
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #avatar-Bangalore {
-    display: none;
-  }
-}
-.login .login-left-part #avatar-Bloodhunt {
-  top: 63%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #avatar-Bloodhunt {
-    display: none;
-  }
-}
-.login .login-left-part #avatar-Lifeline {
-  top: 78%;
-  left: 6%;
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #avatar-Lifeline {
-    display: none;
-  }
-}
-.login .login-left-part #avatar-Pathfinder {
-  top: 22%;
-  left: 3%;
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #avatar-Pathfinder {
-    display: none;
-  }
-}
-.login .login-left-part #big-logo {
-  width: 600px;
-  height: 600px;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #big-logo {
-    height: 450px;
-    width: 345px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .login .login-left-part #big-logo {
-    position: static;
-    width: 300px;
-    height: 300px;
-    transform: translate(0, 0);
-    margin-top: 50px;
-  }
-}
-@media screen and (max-height: 1000px) {
-  .login .login-left-part #big-logo {
-    width: 400px;
-    height: 400px;
-  }
-}
-.login .login-left-part #msg-gamebot {
-  top: 46px;
-  left: 46px;
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #msg-gamebot {
-    display: none;
-  }
-}
-@media screen and (max-height: 600px) {
-  .login .login-left-part #msg-gamebot {
-    display: none;
-  }
-}
-.login .login-left-part #msg-user {
-  top: 80%;
-  left: 31%;
-}
-@media screen and (max-width: 1250px) {
-  .login .login-left-part #msg-user {
-    display: none;
-  }
-}
-@media screen and (max-height: 600px) {
-  .login .login-left-part #msg-user {
-    display: none;
-  }
-}
-.login .login-left-part .message-user {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.login .login-left-part .img-gamebot, .login .login-left-part .message-user {
-  margin-right: 15px;
-}
-.login .login-left-part .msg {
-  display: flex;
-  align-items: center;
-  position: absolute;
-}
-.login .login-left-part .msg .message-gamebot h4 {
-  text-transform: uppercase;
-}
-.login .login-left-part .msg h4 {
-  margin-bottom: 5px;
-}
-.login .login-left-part #logo-msg {
-  width: 60px;
-  height: 60px;
-}
-@media screen and (max-width: 900px) {
-  .login .login-left-part {
-    display: flex;
-    justify-content: center;
   }
 }
 .login .login-right-part {
