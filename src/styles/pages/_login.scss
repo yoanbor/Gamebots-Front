@@ -5,6 +5,10 @@
   grid-template-columns: 1fr 1fr;
   height: 100vh;
 
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
   .login-left-part {
 
     .img-avatars {
@@ -67,6 +71,11 @@
         transform: translate(0, 0);
         margin-top: 50px;
       }
+
+      @media screen and (max-height: 1000px) {
+        width: 400px;
+        height: 400px;
+      }
     }
 
     #msg-gamebot {
@@ -76,6 +85,10 @@
       @media screen and (max-width: 1250px) {
         display: none
       }
+
+      @media screen and (max-height: 600px) {
+        display: none
+      }
     }
 
     #msg-user {
@@ -83,6 +96,10 @@
       left: 31%;
 
       @media screen and (max-width: 1250px) {
+        display: none
+      }
+
+      @media screen and (max-height: 600px) {
         display: none
       }
     }
@@ -142,6 +159,10 @@
         margin-top: 30px;
         margin-bottom: 30px;
       }
+
+      @media screen and (max-height: 800px) {
+        margin-bottom: 15px;
+      }
     }
 
     .form-container {
@@ -156,6 +177,14 @@
           margin-bottom: 50px;
         }
 
+        @media screen and (max-height: 900px) {
+          margin-bottom: 50px;
+        }
+
+        @media screen and (max-height: 800px) {
+          margin-bottom: 15px;
+        }
+
         .labels {
           display: flex;
           flex-direction: column;
@@ -163,6 +192,10 @@
 
           @media screen and (max-width: 900px) {
             margin-bottom: 10px;
+          }
+
+          @media screen and (max-height: 800px) {
+            margin-bottom: 5px;
           }
 
           .label {
@@ -211,6 +244,10 @@
           border-color: $primaryColor-Medium;
           margin-top: 50px;
           cursor: pointer;
+
+          @media screen and (max-height: 600px) {
+            margin-top: 5px;
+          }
         }
 
         #lostPassword {
@@ -227,16 +264,12 @@
 
     p {
       color: #23222D;
-    }
 
-    #need-to-register {
-      color: $secondaryColor-Medium;
-      font-weight: bold;
-      text-decoration: none;
+      #need-to-register {
+        color: $secondaryColor-Medium;
+        font-weight: bold;
+        text-decoration: none;
+      }
     }
-  }
-
-  @media screen and (max-width: 900px) {
-    grid-template-columns: 1fr;
   }
 }

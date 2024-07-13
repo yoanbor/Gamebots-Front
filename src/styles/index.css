@@ -75,6 +75,11 @@ a:visited {
   grid-template-columns: 1fr 1fr;
   height: 100vh;
 }
+@media screen and (max-width: 900px) {
+  .register {
+    grid-template-columns: 1fr;
+  }
+}
 .register .register-left-part .img-avatars {
   position: absolute;
 }
@@ -137,6 +142,12 @@ a:visited {
     margin-top: 50px;
   }
 }
+@media screen and (max-height: 1000px) {
+  .register .register-left-part #big-logo {
+    width: 400px;
+    height: 400px;
+  }
+}
 .register .register-left-part #msg-gamebot {
   top: 46px;
   left: 46px;
@@ -146,11 +157,21 @@ a:visited {
     display: none;
   }
 }
+@media screen and (max-height: 600px) {
+  .register .register-left-part #msg-gamebot {
+    display: none;
+  }
+}
 .register .register-left-part #msg-user {
   top: 80%;
   left: 31%;
 }
 @media screen and (max-width: 1250px) {
+  .register .register-left-part #msg-user {
+    display: none;
+  }
+}
+@media screen and (max-height: 600px) {
   .register .register-left-part #msg-user {
     display: none;
   }
@@ -205,6 +226,11 @@ a:visited {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-height: 800px) {
+  .register .register-right-part h1 {
+    margin-bottom: 15px;
+  }
+}
 .register .register-right-part .form-container .form {
   display: flex;
   flex-direction: column;
@@ -216,6 +242,16 @@ a:visited {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-height: 900px) {
+  .register .register-right-part .form-container .form {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .register .register-right-part .form-container .form {
+    margin-bottom: 15px;
+  }
+}
 .register .register-right-part .form-container .form .labels {
   display: flex;
   flex-direction: column;
@@ -224,6 +260,11 @@ a:visited {
 @media screen and (max-width: 900px) {
   .register .register-right-part .form-container .form .labels {
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .register .register-right-part .form-container .form .labels {
+    margin-bottom: 5px;
   }
 }
 .register .register-right-part .form-container .form .labels .label {
@@ -272,6 +313,11 @@ a:visited {
   margin-top: 20px;
   margin-right: 8px;
 }
+@media screen and (max-height: 800px) {
+  .register .register-right-part .form-container .form .checkbox input[type=checkbox] {
+    margin-top: 5px;
+  }
+}
 .register .register-right-part .form-container .form input[type=submit] {
   height: 65px;
   width: 194.05px;
@@ -282,18 +328,18 @@ a:visited {
   margin-top: 50px;
   cursor: pointer;
 }
+@media screen and (max-height: 600px) {
+  .register .register-right-part .form-container .form input[type=submit] {
+    margin-top: 5px;
+  }
+}
 .register .register-right-part p {
   color: #23222D;
 }
-.register .register-right-part #need-to-login {
+.register .register-right-part p #need-to-login {
   color: #155E75;
   font-weight: bold;
   text-decoration: none;
-}
-@media screen and (max-width: 900px) {
-  .register {
-    grid-template-columns: 1fr;
-  }
 }
 
 @font-face {
@@ -336,6 +382,11 @@ a:visited {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+}
+@media screen and (max-width: 900px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
 }
 .login .login-left-part .img-avatars {
   position: absolute;
@@ -399,6 +450,12 @@ a:visited {
     margin-top: 50px;
   }
 }
+@media screen and (max-height: 1000px) {
+  .login .login-left-part #big-logo {
+    width: 400px;
+    height: 400px;
+  }
+}
 .login .login-left-part #msg-gamebot {
   top: 46px;
   left: 46px;
@@ -408,11 +465,21 @@ a:visited {
     display: none;
   }
 }
+@media screen and (max-height: 600px) {
+  .login .login-left-part #msg-gamebot {
+    display: none;
+  }
+}
 .login .login-left-part #msg-user {
   top: 80%;
   left: 31%;
 }
 @media screen and (max-width: 1250px) {
+  .login .login-left-part #msg-user {
+    display: none;
+  }
+}
+@media screen and (max-height: 600px) {
   .login .login-left-part #msg-user {
     display: none;
   }
@@ -467,6 +534,11 @@ a:visited {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-height: 800px) {
+  .login .login-right-part h1 {
+    margin-bottom: 15px;
+  }
+}
 .login .login-right-part .form-container .form {
   display: flex;
   flex-direction: column;
@@ -478,6 +550,16 @@ a:visited {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-height: 900px) {
+  .login .login-right-part .form-container .form {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .login .login-right-part .form-container .form {
+    margin-bottom: 15px;
+  }
+}
 .login .login-right-part .form-container .form .labels {
   display: flex;
   flex-direction: column;
@@ -486,6 +568,11 @@ a:visited {
 @media screen and (max-width: 900px) {
   .login .login-right-part .form-container .form .labels {
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .login .login-right-part .form-container .form .labels {
+    margin-bottom: 5px;
   }
 }
 .login .login-right-part .form-container .form .labels .label {
@@ -528,6 +615,11 @@ a:visited {
   margin-top: 50px;
   cursor: pointer;
 }
+@media screen and (max-height: 600px) {
+  .login .login-right-part .form-container .form input[type=submit] {
+    margin-top: 5px;
+  }
+}
 .login .login-right-part .form-container .form #lostPassword {
   color: #9CA3AF;
   cursor: pointer;
@@ -539,15 +631,10 @@ a:visited {
 .login .login-right-part p {
   color: #23222D;
 }
-.login .login-right-part #need-to-register {
+.login .login-right-part p #need-to-register {
   color: #155E75;
   font-weight: bold;
   text-decoration: none;
-}
-@media screen and (max-width: 900px) {
-  .login {
-    grid-template-columns: 1fr;
-  }
 }
 
 @font-face {
