@@ -25,6 +25,51 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:visited {
+  color: initial;
+}
+
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:visited {
+  color: initial;
+}
+
 .register {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -251,6 +296,42 @@ li {
   }
 }
 
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:visited {
+  color: initial;
+}
+
 .login {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -467,6 +548,135 @@ li {
   .login {
     grid-template-columns: 1fr;
   }
+}
+
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:visited {
+  color: initial;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 71px 48px;
+}
+@media screen and (max-width: 750px) {
+  header {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header-left-part {
+    display: none;
+  }
+}
+header .header-left-part a {
+  display: flex;
+  align-items: center;
+}
+header .header-left-part a img {
+  height: 100px;
+  width: 100px;
+  margin-right: 35px;
+}
+header .header-left-part a h1 {
+  text-transform: uppercase;
+  color: #155E75;
+  font-family: "font-1-bold", sans-serif;
+  font-size: 3.75rem;
+}
+@media screen and (max-width: 1080px) {
+  header .header-left-part a h1 {
+    font-size: 2rem;
+  }
+}
+header .header-right-part {
+  display: flex;
+  align-items: center;
+}
+header .header-right-part form {
+  margin-right: 35px;
+}
+header .header-right-part form input {
+  width: 400px;
+  height: 50px;
+  border-radius: 8px;
+  padding: 15px;
+}
+@media screen and (max-width: 1080px) {
+  header .header-right-part form input {
+    width: 200px;
+  }
+}
+header .header-right-part .my-account {
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+header .my-account-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  border-radius: 8px;
+  padding-left: 10px;
+  width: 220px;
+  height: 100px;
+  top: 180px;
+  right: 50px;
+  box-shadow: 0 0 5px 0.5px black;
+}
+header .my-account-container .go-to-my-account,
+header .my-account-container .disconnect {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+header .my-account-container .go-to-my-account img,
+header .my-account-container .disconnect img {
+  width: 30px;
+  height: 30px;
+}
+header .my-account-container .go-to-my-account p,
+header .my-account-container .disconnect p {
+  margin-left: 15px;
+  font-size: 1rem;
+  color: #475569;
+}
+header .my-account-container .disconnect {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
