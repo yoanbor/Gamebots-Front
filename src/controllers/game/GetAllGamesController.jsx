@@ -1,8 +1,8 @@
 import getAllGames from "../../services/game/GetAllGamesService.jsx";
 
-const getAllGamesController = () => {
+const getAllGamesController = async () => {
     try {
-        return getAllGames();
+        return await getAllGames();
     } catch (error) {
         console.log("Erreur lors de la récupération des jeux");
         throw error;
