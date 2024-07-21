@@ -37,7 +37,7 @@ function Register() {
             return;
         }
 
-        const newUser = new User(null, pseudo, null, email, password, new Date(), null, 1);
+        const newUser = new User(null, pseudo, null, email, password, new Date(), null, null);
 
         await createUserAccountController(newUser);
         setPseudo("");
