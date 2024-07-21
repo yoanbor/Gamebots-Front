@@ -4,6 +4,8 @@ class Game {
         this.title = title;
         this.studio = studio;
         this.releaseDate = releaseDate;
+        this.platform = platform;
+        this.story = story;
         this.isOnline = isOnline;
         this.numberPlayers = numberPlayers;
         this.creationDate = creationDate;
