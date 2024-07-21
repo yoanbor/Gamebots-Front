@@ -645,4 +645,224 @@ header .my-account-container .disconnect {
   margin-bottom: 0;
 }
 
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:visited {
+  color: initial;
+}
+
+.home-page .games-list {
+  margin: 0 50px;
+}
+.home-page .games-list h2 {
+  color: #083344;
+  font-family: "font-1-bold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+.home-page .games-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.home-page .games-list ul li {
+  display: flex;
+}
+.home-page .games-list ul li .games {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.home-page .games-list ul li .games img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+.home-page .games-list ul li .games p {
+  color: #155E75;
+  font-size: 1.5rem;
+  font-family: "font-1-bold", sans-serif;
+}
+
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:visited {
+  color: initial;
+}
+
+.account-page .account-page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.account-page .account-page-container .account-right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.account-page .account-page-container .account-right-part h1 {
+  text-transform: uppercase;
+  color: #083344;
+  font-size: 3rem;
+  font-family: "font-1-bold", sans-serif;
+  word-wrap: break-word;
+  max-width: 370px;
+}
+.account-page .account-page-container .account-right-part .form-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 131px;
+}
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container .account-right-part .form-container .form {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .account-page .account-page-container .account-right-part .form-container .form {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .account-page .account-page-container .account-right-part .form-container .form {
+    margin-bottom: 15px;
+  }
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container .account-right-part .form-container .form .labels {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .account-page .account-page-container .account-right-part .form-container .form .labels {
+    margin-bottom: 5px;
+  }
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels .label {
+  z-index: 10;
+  transform: translateX(10px);
+  background-color: white;
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels #label-pseudo {
+  padding-left: 7px;
+  max-width: 15%;
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels #label-email {
+  padding-left: 7px;
+  max-width: 13%;
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels #label-password {
+  padding-left: 7px;
+  max-width: 24%;
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels #label-phone {
+  padding-left: 7px;
+  max-width: 37%;
+}
+.account-page .account-page-container .account-right-part .form-container .form .labels .inputs {
+  width: 466.11px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 0 0 0 15px;
+  transform: translateY(-10px);
+}
+.account-page .account-page-container .account-right-part .form-container .form .field, .account-page .account-page-container .account-right-part .form-container .form .field-password {
+  position: relative;
+}
+.account-page .account-page-container .account-right-part .form-container .form .password-toggle svg, .account-page .account-page-container .account-right-part .form-container .form .password-toggle svg {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  color: #CBD5E1;
+  cursor: pointer;
+}
+.account-page .account-page-container .account-right-part .form-container .form input[type=submit] {
+  height: 65px;
+  width: 194.05px;
+  border-radius: 8px;
+  color: rgb(243, 243, 243);
+  background-color: #F97316;
+  border-color: #F97316;
+  margin: 20px 0 0 58.5%;
+  cursor: pointer;
+}
+@media screen and (max-height: 600px) {
+  .account-page .account-page-container .account-right-part .form-container .form input[type=submit] {
+    margin-top: 5px;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
