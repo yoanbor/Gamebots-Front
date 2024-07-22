@@ -8,7 +8,7 @@ import Account from "./pages/Account.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <Login />,
         errorElement: <PageError/>
     },
     {
