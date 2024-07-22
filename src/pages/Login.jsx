@@ -27,6 +27,7 @@ function Login() {
             const response = await loginUserController(user);
             if (response && response.data) {
                 localStorage.setItem('token', response.data);
+                localStorage.setItem('username', pseudo);
                 setPseudo("");
                 setPassword("");
                 navigate('/home');
