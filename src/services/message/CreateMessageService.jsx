@@ -1,7 +1,19 @@
 import axios from "axios";
 
-function createMessage(message) {
-    return axios.post('http://localhost:8080/messages', message)
-}
+const createMessage = async (message) => {
+    const token = localStorage.getItem("token");
+
+    try {
+        await axios.post('http://localhost:8080/messages', message, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            }
+        });
+    } catch (error) {
+        console.log("Erreur lors de la création du message");
+        throw error;
+    }
+};
 
 export default createMessage;
