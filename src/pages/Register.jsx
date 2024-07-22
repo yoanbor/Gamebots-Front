@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import RegisterAndLoginLeftPart from "../components/RegisterLoginLeftPart.jsx";
 import User from "../models/User.jsx";
 import createUserAccountController from "../controllers/user/CreateUserAccountController.jsx";
+import loginUserController from "../controllers/config/AuthController.jsx"; // Importer pour connecter l'utilisateur après l'inscription
 
 function Register() {
     const [inputType, setInputType] = useState('password');
@@ -29,6 +30,8 @@ function Register() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState(null);
 
+    const navigate = useNavigate(); // Hook pour la navigation
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -39,14 +42,29 @@ function Register() {
 
         const newUser = new User(null, pseudo, null, email, password, new Date(), null, null);
 
-        await createUserAccountController(newUser);
-        setPseudo("");
-        setEmail("");
-        setPassword("");
-        setConfirmPassword("");
-        setError(null);
-    }
+        try {
+            await createUserAccountController(newUser);
 
+            const user = new User(null, pseudo, null, email, password, null, null, null);
+            const response = await loginUserController(user);
+
+            if (response && response.data) {
+                localStorage.setItem('token', response.data);
+                localStorage.setItem('username', pseudo);
+                setPseudo("");
+                setEmail("");
+                setPassword("");
+                setConfirmPassword("");
+                setError(null);
+
+                navigate('/home');
+            } else {
+                new Error('Utilisateur non valide');
+            }
+        } catch (err) {
+            setError(err.message || 'Erreur lors de l\'inscription, veuillez réessayer.');
+        }
+    }
 
     return (
         <div className="register">
@@ -109,9 +127,9 @@ function Register() {
                         <label className="checkbox">
                             <input type="checkbox" required id="CGU" />
                             Veuillez accepter les
-                            <NavLink to="/CGU" id="need-to-login"> Conditions Générales d’Utilisations</NavLink> et
+                            <NavLink to={"/CGU"} id="need-to-login"> Conditions Générales d’Utilisations</NavLink> et
                             les
-                            <NavLink to="/MentionsLegales" id="need-to-login"> Mentions Légales</NavLink>
+                            <NavLink to={"/MentionsLegales"} id="need-to-login"> Mentions Légales</NavLink>
                         </label>
 
                         <input type="submit" id="register" value="S'inscrire" />
