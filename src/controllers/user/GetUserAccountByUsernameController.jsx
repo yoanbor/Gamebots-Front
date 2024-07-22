@@ -1,8 +1,8 @@
-import getUserAccountByUserId from "../../services/user/GetUserAccountByUserIdService.jsx";
+import getUserAccountByUsername from "../../services/user/GetUserAccountByUsernameService.jsx";
 
 const getUserAccountByUsernameController = async (username) => {
     try {
-        return getUserAccountByUserId(username);
+        return getUserAccountByUsername(username);
     } catch (error) {
         console.error("Erreur lors de la récupération de l'utilisateur par son username");
         throw error;
