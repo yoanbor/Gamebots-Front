@@ -4,9 +4,11 @@ const getImageBannerByGameId = async (gameId) => {
     const token = localStorage.getItem('token');
 
     try {
-        const response = await axios.get(`http://localhost:8080/games/${gameId}/banner`, {
-            headers: {
-                'Authorization': `Bearer ${token}`,
+        const response = await axios.get(
+            `http://localhost:8080/games/${gameId}/banner`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
             },
         });
         return response.data;
