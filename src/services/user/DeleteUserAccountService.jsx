@@ -6,7 +6,7 @@ const deleteUserAccount = async (userAccountId) => {
     try {
         const response = await axios.delete(
             'http://localhost:8080/users/' + userAccountId, {
-            method: 'GET',
+            method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`,
             }

@@ -5,7 +5,7 @@ const createUserAccount = async (account) => {
 
     try {
         await axios.post('http://localhost:8080/users', account, {
-            method: 'PUT',
+            method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
             }
