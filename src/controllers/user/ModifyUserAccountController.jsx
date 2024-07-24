@@ -1,12 +1,12 @@
 import modifyUserAccount from "../../services/user/ModifyUserAccountService.jsx";
 
-const ModifyUserAccountController = async (userAccountId) => {
+const modifyUserAccountController = async (user) => {
     try {
-        return modifyUserAccount(userAccountId)
+        return await modifyUserAccount(user);
     } catch (error) {
-        console.error("Erreur lors de la modification de l'utilisateur par son id");
+        console.error("Erreur lors de la modification de l'utilisateur", error.response ? error.response.data : error.message);
         throw error;
     }
 }
 
-export default ModifyUserAccountController;
+export default modifyUserAccountController;

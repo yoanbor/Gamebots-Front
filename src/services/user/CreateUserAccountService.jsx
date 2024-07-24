@@ -1,19 +1,7 @@
 import axios from "axios";
 
-const createUserAccount = async (account) => {
-    const token = localStorage.getItem('token');
-
-    try {
-        await axios.post('http://localhost:8080/users', account, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-            }
-        });
-    } catch (error) {
-        console.log("Erreur lors de la création de l'utilisateur");
-        throw error;
-    }
-};
+function createUserAccount(account) {
+    return axios.post('http://localhost:8080/users', account);
+}
 
 export default createUserAccount;
