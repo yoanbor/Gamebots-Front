@@ -12,13 +12,14 @@ const Header = () => {
     const handleLogout = useCallback(() => {
         localStorage.removeItem('token');
         localStorage.removeItem('username');
+        localStorage.removeItem('userAccountId');
         navigate('/login');
     }, [navigate]);
 
     return (
         <header>
             <div className="header-left-part">
-                <NavLink to={"/home"} exact>
+                <NavLink to={"/home"}>
                     <img src="/Logo.svg" alt="logo Gamebots" />
                     <h1>Gamebots</h1>
                 </NavLink>
