@@ -1,0 +1,143 @@
+@import "../settings.scss";
+
+.account-page {
+  .account-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .account-right-part {
+      margin: 0 auto;
+
+      .informations-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h1 {
+          text-transform: uppercase;
+          color: $secondaryColor-Highter;
+          font-size: 3rem;
+          font-family: $displayFont-H3;
+          word-wrap: break-word;
+          max-width: 370px;
+          margin-bottom: 50px;
+        }
+
+        .form-container {
+
+          .form {
+            display: grid;
+
+            @media screen and (max-width: 900px) {
+              margin-bottom: 50px;
+            }
+
+            @media screen and (max-height: 900px) {
+              margin-bottom: 50px;
+            }
+
+            @media screen and (max-height: 800px) {
+              margin-bottom: 15px;
+            }
+
+            .labels {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 30px;
+
+              @media screen and (max-width: 900px) {
+                margin-bottom: 10px;
+              }
+
+              @media screen and (max-height: 800px) {
+                margin-bottom: 5px;
+              }
+
+              .label {
+                z-index: 10;
+                transform: translateX(10px);
+                background-color: white;
+              }
+
+              #label-pseudo {
+                padding-left: 7px;
+                max-width: 15%;
+              }
+
+              #label-email {
+                padding-left: 7px;
+                max-width: 13%;
+              }
+
+              #label-password {
+                padding-left: 7px;
+                max-width: 24%;
+              }
+
+              #label-phone {
+                padding-left: 7px;
+                max-width: 37%;
+              }
+
+              .inputs {
+                width: 466.11px;
+                height: 48px;
+                border-radius: 8px;
+                padding: 0 0 0 15px;
+                transform: translateY(-10px);
+              }
+            }
+
+            .field, .field-password {
+              position: relative;
+            }
+
+            .password-toggle svg, .password-toggle svg {
+              position: absolute;
+              top: 20px;
+              right: 15px;
+              color: #CBD5E1;
+              cursor: pointer;
+            }
+
+            .button-container {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 20px;
+              width: 100%;
+
+              .delete-button,
+              .cancel-button,
+              input[type="submit"] {
+                height: 65px;
+                width: 30%;
+              }
+            }
+
+            .delete-button {
+              background-color: transparent;
+              border: none;
+              color: rgba(153, 27, 27, 1);
+            }
+
+            .cancel-button {
+              border-radius: 8px;
+              color: $primaryColor-Medium;
+              background-color: rgba(255, 237, 213, 1);
+              border-color: rgba(255, 237, 213, 1);
+            }
+
+            input[type="submit"] {
+              border-radius: 8px;
+              color: $white;
+              background-color: $primaryColor-Medium;
+              border-color: $primaryColor-Medium;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
