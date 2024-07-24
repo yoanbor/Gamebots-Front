@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import RegisterAndLoginLeftPart from "../components/RegisterLoginLeftPart.jsx";
 import User from "../models/User.jsx";
 import createUserAccountController from "../controllers/user/CreateUserAccountController.jsx";
-import loginUserController from "../controllers/config/AuthController.jsx"; // Importer pour connecter l'utilisateur après l'inscription
+import loginUserController from "../controllers/config/AuthController.jsx";
 
 function Register() {
     const [inputType, setInputType] = useState('password');
