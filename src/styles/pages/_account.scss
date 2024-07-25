@@ -137,6 +137,17 @@
             }
           }
         }
+
+        .mentions {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 350px 125px;
+
+          a {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }

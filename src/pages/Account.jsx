@@ -5,10 +5,12 @@ import modifyUserAccountController from "../controllers/user/ModifyUserAccountCo
 import deleteUserAccountController from "../controllers/user/DeleteUserAccountController.jsx";
 import getUserAccountByUserIdController from "../controllers/user/GetUserAccountByUserIdController.jsx";
 import getUserAccountByUsernameController from "../controllers/user/GetUserAccountByUsernameController.jsx";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Account = () => {
     const [inputType, setInputType] = useState('password');
     const passwordInput = useRef(null);
+    const navigate = useNavigate();
 
     const [pseudo, setPseudo] = useState('');
     const [email, setEmail] = useState('');
@@ -79,7 +81,7 @@ const Account = () => {
             await deleteUserAccountController(localStorage.userAccountId);
             localStorage.removeItem('userAccountId');
             localStorage.removeItem('token');
-            setError('Compte supprimé avec succès');
+            navigate('/login');
         } catch (error) {
             setError("Erreur lors de la suppression du compte utilisateur");
         }
@@ -182,6 +184,11 @@ const Account = () => {
                                     <input type="submit" id="register" value="Valider"/>
                                 </div>
                             </form>
+                        </div>
+                        <div className={"mentions"}>
+                            <NavLink to={"/MentionsLegales"} id="need-to-login">Mentions Légales</NavLink>
+                            <NavLink to={"/CGU"} id="need-to-login">CGU</NavLink>
+                            <NavLink to={"/Copyright"} id="need-to-login">Copyright © 2024 GameBots</NavLink>
                         </div>
                     </div>
                 </div>

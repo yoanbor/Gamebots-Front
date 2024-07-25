@@ -905,5 +905,14 @@ a:visited {
   border-color: #F97316;
   cursor: pointer;
 }
+.account-page .account-page-container .account-right-part .informations-part .mentions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 350px 125px;
+}
+.account-page .account-page-container .account-right-part .informations-part .mentions a {
+  margin-bottom: 10px;
+}
 
 /*# sourceMappingURL=index.css.map */
