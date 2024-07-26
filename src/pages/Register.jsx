@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import RegisterAndLoginLeftPart from "../components/RegisterLoginLeftPart.jsx";
 import { togglePassword } from "../business/togglePassword.jsx";
-import { handleSubmit } from "../business/register/handleSubmit.jsx";
+import { handleSubmitForRegister } from "../business/register/handleSubmitForRegister.jsx";
 import {EyeOffIcon} from "../assets/icons/eye-off.jsx";
 import {EyeIcon} from "../assets/icons/eye.jsx";
 
@@ -31,7 +31,7 @@ function Register() {
             <div className="register-right-part">
                 <h1>Gamebots</h1>
                 <div className="form-container">
-                    <form className="form" onSubmit={(e) => handleSubmit(e, pseudo, email, password, confirmPassword, setError, navigate, setPseudo, setEmail, setPassword, setConfirmPassword)}>
+                    <form className="form" onSubmit={(e) => handleSubmitForRegister(e, pseudo, email, password, confirmPassword, setError, navigate, setPseudo, setEmail, setPassword, setConfirmPassword)}>
                         <label className="labels">
                             <p className='label' id="label-pseudo">Pseudo</p>
                             <input type="text" className="inputs" required placeholder="Herobrine" autoComplete="username" value={pseudo} onChange={(e) => setPseudo(e.target.value)} />

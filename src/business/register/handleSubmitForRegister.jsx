@@ -2,7 +2,7 @@ import User from "../../models/User.jsx";
 import createUserAccountController from "../../controllers/user/CreateUserAccountController.jsx";
 import loginUserController from "../../controllers/config/AuthController.jsx";
 
-export const handleSubmit = async (e, pseudo, email, password, confirmPassword, setError, navigate, setPseudo, setEmail, setPassword, setConfirmPassword) => {
+export const handleSubmitForRegister = async (e, pseudo, email, password, confirmPassword, setError, navigate, setPseudo, setEmail, setPassword, setConfirmPassword) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
