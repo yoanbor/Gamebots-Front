@@ -32,7 +32,7 @@ const Home = () => {
                                 <li key={game.idGame} onClick={() => handleGameClick(game.idGame)}>
                                     <div className="games">
                                         {game.bannerImage && <img src={game.bannerImage.source} alt={game.title} />}
-                                        <p>{game.title}</p>
+                                        <h3>{game.title}</h3>
                                     </div>
                                 </li>
                             ))}
