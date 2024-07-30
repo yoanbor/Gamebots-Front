@@ -8,24 +8,53 @@
   src: url(../assets/fonts/Play-Bold.ttf);
 }
 
-$primaryColor-Lowest: #FFF7ED;
-$primaryColor-Lower: #FFEDD5;
-$primaryColor-Low: #FDBA74;
-$primaryColor-Medium: #F97316;
-$primaryColor-Hight: #C2410C;
-$primaryColor-Highter: #7C2D12;
-$primaryColor-Hightest: #431407;
+$primaryColor-Lowest: rgba(255, 247, 237, 1);
+$primaryColor-Lower: rgba(255, 237, 213, 1);
+$primaryColor-Low: rgba(253, 186, 116, 1);
+$primaryColor-Medium: rgba(249, 115, 22, 1);
+$primaryColor-Hight: rgba(194, 65, 12, 1);
+$primaryColor-Highter: rgba(124, 45, 18, 1);
+$primaryColor-Hightest: rgba(67, 20, 7, 1);
 
-$secondaryColor-Lowest: #A5F3FC;
-$secondaryColor-Lower: #67E8F9;
-$secondaryColor-Low: #0891B2;
-$secondaryColor-Medium: #155E75;
-$secondaryColor-Hight: #164E63;
-$secondaryColor-Highter: #083344;
-$secondaryColor-Hightest: #001E2A;
+$secondaryColor-Lowest: rgba(165, 243, 252, 1);
+$secondaryColor-Lower: rgba(103, 232, 249, 1);
+$secondaryColor-Low: rgba(8, 145, 178, 1);
+$secondaryColor-Medium: rgba(21, 94, 117, 1);
+$secondaryColor-Hight: rgba(22, 78, 99, 1);
+$secondaryColor-Highter: rgba(8, 51, 68, 1);
+$secondaryColor-Hightest: rgba(0, 30, 42, 1);
 
-$white: rgb(243, 243, 243);
-$black: rgb(12, 12, 12);
+$dangerColor: rgba(153, 27, 27, 1);
+
+.light-theme {
+  --backgroundColor: #{$primaryColor-Lowest};
+  --h1Color: #{$secondaryColor-Medium};
+  --h2Color: #{$secondaryColor-Highter};
+  --h3Color: #{$secondaryColor-Medium};
+  --h4Color: #{$secondaryColor-Hightest};
+  --textColor: #{$secondaryColor-Hightest};
+  --mainActionColor: #{$primaryColor-Medium};
+  --mainActionTextColor: #{$primaryColor-Lowest};
+  --switchMainActionColor: #{$secondaryColor-Medium};
+  --secondaryActionColor: #{$primaryColor-Lower};
+  --tertiaryActionColor: #{$secondaryColor-Highter};
+  --linkColor: #{$secondaryColor-Medium};
+}
+
+.dark-theme {
+  --backgroundColor: #{$secondaryColor-Hightest};
+  --h1Color: #{$primaryColor-Hight};
+  --h2Color: #{$primaryColor-Medium};
+  --h3Color: #{$primaryColor-Low};
+  --h4Color: #{$primaryColor-Lowest};
+  --textColor: #{$primaryColor-Lowest};
+  --mainActionColor: #{$primaryColor-Medium};
+  --mainActionTextColor: #{$primaryColor-Lowest};
+  --switchMainActionColor: #{$primaryColor-Medium};
+  --secondaryActionColor: #{$primaryColor-Lower};
+  --tertiaryActionColor: #{$primaryColor-Low};
+  --linkColor: #{$secondaryColor-Low};
+}
 
 $displayFont-H1: "font-1-bold", sans-serif;
 $displayFont-H2: "font-1-bold", sans-serif;
@@ -60,6 +89,34 @@ $textBoldFont-Smallest: "font-1-bold", sans-serif;
   font-family: $textFont-Medium;
 }
 
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
+}
+
 label {
   color: #94A3B8;
 }
@@ -74,13 +131,4 @@ li {
 
 button {
   cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-a:visited {
-  color: initial;
 }

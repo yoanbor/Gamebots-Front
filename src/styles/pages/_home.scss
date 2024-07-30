@@ -1,11 +1,10 @@
-@import "../settings";
+@import "../settings.scss";
 
 .home-page {
   .games-list {
     margin: 0 50px;
 
     h2 {
-      color: $secondaryColor-Highter;
       font-family: "font-1-bold", sans-serif;
       font-size: 2rem;
       margin-bottom: 50px;
@@ -36,8 +35,7 @@
             margin-bottom: 10px;
           }
 
-          p {
-            color: $secondaryColor-Medium;
+          h3 {
             font-size: 1.5rem;
             font-family: "font-1-bold", sans-serif;
           }

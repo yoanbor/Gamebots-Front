@@ -1,4 +1,4 @@
-@import "../settings";
+@import "../settings.scss";
 
 header {
   display: flex;
@@ -17,6 +17,7 @@ header {
     a {
       display: flex;
       align-items: center;
+      text-decoration: none;
 
       img {
         height: 100px;
@@ -26,7 +27,6 @@ header {
 
       h1 {
         text-transform: uppercase;
-        color: $secondaryColor-Medium;
         font-family: "font-1-bold", sans-serif;
         font-size: 3.75rem;
 
@@ -42,6 +42,10 @@ header {
     align-items: center;
 
 
+    #switch-dark-light {
+      background-color: transparent;
+      border: none;
+    }
 
     form {
       margin-right: 35px;
@@ -79,6 +83,10 @@ header {
     right: 50px;
     box-shadow: 0 0 5px 0.5px black;
 
+    a {
+      text-decoration: none;
+    }
+
     .go-to-my-account,
     .disconnect {
       display: flex;
@@ -93,7 +101,6 @@ header {
       p {
         margin-left: 15px;
         font-size: 1rem;
-        color: #475569;
       }
     }
 

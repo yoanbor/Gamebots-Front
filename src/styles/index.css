@@ -6,11 +6,69 @@
   font-family: "font-1-bold";
   src: url(../assets/fonts/Play-Bold.ttf);
 }
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
 }
 
 label {
@@ -29,13 +87,93 @@ button {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: initial;
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
 }
 
-a:visited {
-  color: initial;
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .left-part .img-avatars {
@@ -172,11 +310,69 @@ a:visited {
   font-family: "font-1-bold";
   src: url(../assets/fonts/Play-Bold.ttf);
 }
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
 }
 
 label {
@@ -195,15 +391,6 @@ button {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-a:visited {
-  color: initial;
-}
-
 .register {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -212,32 +399,6 @@ a:visited {
 @media screen and (max-width: 900px) {
   .register {
     grid-template-columns: 1fr;
-  }
-}
-.register .register-right-part {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.register .register-right-part h1 {
-  text-transform: uppercase;
-  color: #155E75;
-  font-size: 4rem;
-  font-weight: bold;
-  line-height: 60px;
-  margin-bottom: 90px;
-  font-family: "font-1-bold", sans-serif;
-}
-@media screen and (max-width: 900px) {
-  .register .register-right-part h1 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-}
-@media screen and (max-height: 800px) {
-  .register .register-right-part h1 {
-    margin-bottom: 15px;
   }
 }
 .register .register-right-part .form-container .form {
@@ -260,38 +421,6 @@ a:visited {
   .register .register-right-part .form-container .form {
     margin-bottom: 15px;
   }
-}
-.register .register-right-part .form-container .form .labels {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 900px) {
-  .register .register-right-part .form-container .form .labels {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-height: 800px) {
-  .register .register-right-part .form-container .form .labels {
-    margin-bottom: 5px;
-  }
-}
-.register .register-right-part .form-container .form .labels .label {
-  z-index: 10;
-  transform: translateX(10px);
-  background-color: white;
-}
-.register .register-right-part .form-container .form .labels #label-pseudo {
-  padding-left: 7px;
-  max-width: 15%;
-}
-.register .register-right-part .form-container .form .labels #label-email {
-  padding-left: 7px;
-  max-width: 13%;
-}
-.register .register-right-part .form-container .form .labels #label-password {
-  padding-left: 7px;
-  max-width: 24%;
 }
 .register .register-right-part .form-container .form .labels #label-confirmPassword {
   padding-left: 7px;
@@ -316,7 +445,7 @@ a:visited {
 }
 .register .register-right-part .form-container .form .checkbox {
   width: 466.11px;
-  color: #23222D;
+  color: var(--textColor);
 }
 .register .register-right-part .form-container .form .checkbox input[type=checkbox] {
   margin-top: 20px;
@@ -327,16 +456,13 @@ a:visited {
     margin-top: 5px;
   }
 }
-.register .register-right-part .form-container .form .checkbox a {
-  color: #155E75;
-}
 .register .register-right-part .form-container .form input[type=submit] {
   height: 65px;
   width: 194.05px;
   border-radius: 8px;
-  color: rgb(243, 243, 243);
-  background-color: #F97316;
-  border-color: #F97316;
+  color: var(--mainActionTextColor);
+  background-color: var(--mainActionColor);
+  border-color: var(--mainActionColor);
   margin-top: 50px;
   cursor: pointer;
 }
@@ -345,11 +471,8 @@ a:visited {
     margin-top: 5px;
   }
 }
-.register .register-right-part p {
-  color: #23222D;
-}
 .register .register-right-part p #need-to-login {
-  color: #155E75;
+  color: var(--tertiaryActionColor);
   font-weight: bold;
   text-decoration: none;
 }
@@ -362,11 +485,69 @@ a:visited {
   font-family: "font-1-bold";
   src: url(../assets/fonts/Play-Bold.ttf);
 }
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
 }
 
 label {
@@ -385,15 +566,6 @@ button {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-a:visited {
-  color: initial;
-}
-
 .login {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -402,32 +574,6 @@ a:visited {
 @media screen and (max-width: 900px) {
   .login {
     grid-template-columns: 1fr;
-  }
-}
-.login .login-right-part {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.login .login-right-part h1 {
-  text-transform: uppercase;
-  color: #155E75;
-  font-size: 4rem;
-  font-weight: bold;
-  line-height: 60px;
-  margin-bottom: 90px;
-  font-family: "font-1-bold", sans-serif;
-}
-@media screen and (max-width: 900px) {
-  .login .login-right-part h1 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-}
-@media screen and (max-height: 800px) {
-  .login .login-right-part h1 {
-    margin-bottom: 15px;
   }
 }
 .login .login-right-part .form-container .form {
@@ -468,8 +614,8 @@ a:visited {
 }
 .login .login-right-part .form-container .form .labels .label {
   z-index: 10;
-  transform: translateX(10px);
-  background-color: white;
+  transform: translate(0px, -10px);
+  color: var(--textColor);
 }
 .login .login-right-part .form-container .form .labels #label-pseudo {
   padding-left: 7px;
@@ -498,11 +644,11 @@ a:visited {
 }
 .login .login-right-part .form-container .form input[type=submit] {
   height: 65px;
-  width: 194.05px;
+  width: 200px;
   border-radius: 8px;
-  color: rgb(243, 243, 243);
-  background-color: #F97316;
-  border-color: #F97316;
+  color: var(--mainActionTextColor);
+  background-color: var(--mainActionColor);
+  border-color: var(--mainActionColor);
   margin-top: 50px;
   cursor: pointer;
 }
@@ -517,13 +663,10 @@ a:visited {
   margin-top: 10px;
 }
 .login .login-right-part .form-container .form #lostPassword:hover {
-  color: #0891B2;
-}
-.login .login-right-part p {
-  color: #23222D;
+  color: var(--secondaryColor-Low);
 }
 .login .login-right-part p #need-to-register {
-  color: #155E75;
+  color: var(--tertiaryActionColor);
   font-weight: bold;
   text-decoration: none;
 }
@@ -536,11 +679,69 @@ a:visited {
   font-family: "font-1-bold";
   src: url(../assets/fonts/Play-Bold.ttf);
 }
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
 }
 
 label {
@@ -557,15 +758,6 @@ li {
 
 button {
   cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-a:visited {
-  color: initial;
 }
 
 header {
@@ -586,6 +778,7 @@ header {
 header .header-left-part a {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 header .header-left-part a img {
   height: 100px;
@@ -594,7 +787,6 @@ header .header-left-part a img {
 }
 header .header-left-part a h1 {
   text-transform: uppercase;
-  color: #155E75;
   font-family: "font-1-bold", sans-serif;
   font-size: 3.75rem;
 }
@@ -606,6 +798,10 @@ header .header-left-part a h1 {
 header .header-right-part {
   display: flex;
   align-items: center;
+}
+header .header-right-part #switch-dark-light {
+  background-color: transparent;
+  border: none;
 }
 header .header-right-part form {
   margin-right: 35px;
@@ -640,6 +836,9 @@ header .my-account-container {
   right: 50px;
   box-shadow: 0 0 5px 0.5px black;
 }
+header .my-account-container a {
+  text-decoration: none;
+}
 header .my-account-container .go-to-my-account,
 header .my-account-container .disconnect {
   display: flex;
@@ -655,7 +854,6 @@ header .my-account-container .go-to-my-account p,
 header .my-account-container .disconnect p {
   margin-left: 15px;
   font-size: 1rem;
-  color: #475569;
 }
 header .my-account-container .disconnect {
   margin-bottom: 0;
@@ -671,11 +869,69 @@ header .my-account-container .disconnect {
   font-family: "font-1-bold";
   src: url(../assets/fonts/Play-Bold.ttf);
 }
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
 }
 
 label {
@@ -694,20 +950,10 @@ button {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-a:visited {
-  color: initial;
-}
-
 .home-page .games-list {
   margin: 0 50px;
 }
 .home-page .games-list h2 {
-  color: #083344;
   font-family: "font-1-bold", sans-serif;
   font-size: 2rem;
   margin-bottom: 50px;
@@ -736,8 +982,7 @@ a:visited {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.home-page .games-list ul li .games p {
-  color: #155E75;
+.home-page .games-list ul li .games h3 {
   font-size: 1.5rem;
   font-family: "font-1-bold", sans-serif;
 }
@@ -750,11 +995,69 @@ a:visited {
   font-family: "font-1-bold";
   src: url(../assets/fonts/Play-Bold.ttf);
 }
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
 }
 
 label {
@@ -773,15 +1076,6 @@ button {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-a:visited {
-  color: initial;
-}
-
 .account-page .account-page-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -795,9 +1089,8 @@ a:visited {
   justify-content: center;
   align-items: flex-start;
 }
-.account-page .account-page-container .account-right-part .informations-part h1 {
+.account-page .account-page-container .account-right-part .informations-part h2 {
   text-transform: uppercase;
-  color: #083344;
   font-size: 3rem;
   font-family: "font-1-bold", sans-serif;
   word-wrap: break-word;
@@ -821,38 +1114,6 @@ a:visited {
   .account-page .account-page-container .account-right-part .informations-part .form-container .form {
     margin-bottom: 15px;
   }
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 900px) {
-  .account-page .account-page-container .account-right-part .informations-part .form-container .form .labels {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-height: 800px) {
-  .account-page .account-page-container .account-right-part .informations-part .form-container .form .labels {
-    margin-bottom: 5px;
-  }
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels .label {
-  z-index: 10;
-  transform: translateX(10px);
-  background-color: white;
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels #label-pseudo {
-  padding-left: 7px;
-  max-width: 15%;
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels #label-email {
-  padding-left: 7px;
-  max-width: 13%;
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels #label-password {
-  padding-left: 7px;
-  max-width: 24%;
 }
 .account-page .account-page-container .account-right-part .informations-part .form-container .form .labels #label-phone {
   padding-left: 7px;
@@ -894,15 +1155,15 @@ a:visited {
 }
 .account-page .account-page-container .account-right-part .informations-part .form-container .form .cancel-button {
   border-radius: 8px;
-  color: #F97316;
-  background-color: rgb(255, 237, 213);
-  border-color: rgb(255, 237, 213);
+  color: var(--mainActionColor);
+  background-color: var(--secondaryActionColor);
+  border-color: var(--secondaryActionColor);
 }
 .account-page .account-page-container .account-right-part .informations-part .form-container .form input[type=submit] {
   border-radius: 8px;
-  color: rgb(243, 243, 243);
-  background-color: #F97316;
-  border-color: #F97316;
+  color: var(--mainActionTextColor);
+  background-color: var(--mainActionColor);
+  border-color: var(--mainActionColor);
   cursor: pointer;
 }
 .account-page .account-page-container .account-right-part .informations-part .mentions {
@@ -913,6 +1174,269 @@ a:visited {
 }
 .account-page .account-page-container .account-right-part .informations-part .mentions a {
   margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+main .main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+}
+main .main .game-part .informations-container {
+  display: flex;
+}
+main .main .game-part .informations-container .informations-left-part .informations {
+  display: flex;
+}
+main .main .game-part .informations-container .informations-left-part .platform {
+  display: flex;
+}
+main .main .game-part .informations-container .informations-left-part .numbersPlayers {
+  display: flex;
+}
+main .main .game-part .informations-container .informations-left-part .releaseDate {
+  display: flex;
+}
+main .main .game-part .informations-container .informations-right-part .history {
+  display: flex;
+}
+
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Play-Regular.ttf);
+}
+@font-face {
+  font-family: "font-1-bold";
+  src: url(../assets/fonts/Play-Bold.ttf);
+}
+.light-theme {
+  --backgroundColor: rgb(255, 247, 237);
+  --h1Color: rgb(21, 94, 117);
+  --h2Color: rgb(8, 51, 68);
+  --h3Color: rgb(21, 94, 117);
+  --h4Color: rgb(0, 30, 42);
+  --textColor: rgb(0, 30, 42);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(21, 94, 117);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(8, 51, 68);
+  --linkColor: rgb(21, 94, 117);
+}
+
+.dark-theme {
+  --backgroundColor: rgb(0, 30, 42);
+  --h1Color: rgb(194, 65, 12);
+  --h2Color: rgb(249, 115, 22);
+  --h3Color: rgb(253, 186, 116);
+  --h4Color: rgb(255, 247, 237);
+  --textColor: rgb(255, 247, 237);
+  --mainActionColor: rgb(249, 115, 22);
+  --mainActionTextColor: rgb(255, 247, 237);
+  --switchMainActionColor: rgb(249, 115, 22);
+  --secondaryActionColor: rgb(255, 237, 213);
+  --tertiaryActionColor: rgb(253, 186, 116);
+  --linkColor: rgb(8, 145, 178);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font-1", sans-serif;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  color: var(--h1Color);
+}
+
+h2 {
+  color: var(--h2Color);
+}
+
+h3 {
+  color: var(--h3Color);
+}
+
+h4 {
+  color: var(--h4Color);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a, a:visited {
+  color: var(--linkColor);
+}
+
+label {
+  color: #94A3B8;
+}
+
+input {
+  border-color: #CBD5E1;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-right-part, .register-right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-right-part h1, .register-right-part h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 60px;
+  margin-bottom: 90px;
+  font-family: "font-1-bold", sans-serif;
+}
+@media screen and (max-width: 900px) {
+  .login-right-part h1, .register-right-part h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .login-right-part h1, .register-right-part h1 {
+    margin-bottom: 15px;
+  }
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 900px) {
+  .labels {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .labels {
+    margin-bottom: 5px;
+  }
+}
+.labels .label {
+  z-index: 10;
+  transform: translate(0px, -10px);
+  color: var(--textColor);
+}
+.labels #label-pseudo {
+  padding-left: 7px;
+  max-width: 15%;
+}
+.labels #label-email {
+  padding-left: 7px;
+  max-width: 13%;
+}
+.labels #label-password {
+  padding-left: 7px;
+  max-width: 24%;
 }
 
 /*# sourceMappingURL=index.css.map */
