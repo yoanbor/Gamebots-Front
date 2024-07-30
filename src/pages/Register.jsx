@@ -63,9 +63,9 @@ function Register() {
                         <label className="checkbox">
                             <input type="checkbox" required id="CGU" />
                             Veuillez accepter les
-                            <NavLink to={"/CGU"} id="need-to-login"> Conditions Générales d’Utilisations</NavLink> et
+                            <NavLink to={"/CGU"} id="CGU"> Conditions Générales d’Utilisations</NavLink> et
                             les
-                            <NavLink to={"/MentionsLegales"} id="need-to-login"> Mentions Légales</NavLink>
+                            <NavLink to={"/MentionsLegales"} id="mentionsLegales"> Mentions Légales</NavLink>
                         </label>
 
                         <input type="submit" id="register" value="S'inscrire" />
