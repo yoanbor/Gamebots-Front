@@ -56,7 +56,7 @@ const Account = () => {
                 </div>
                 <div className="account-right-part">
                     <div className="informations-part">
-                        <h1>Modifier mes informations</h1>
+                        <h2>Modifier mes informations</h2>
                         <div className="form-container">
                             <form className="form" onSubmit={(e) => handleSubmitForAccount(e, userAccountId, password, userId, pseudo, phoneNumber, email, setError)}>
                                 <label className="labels">
