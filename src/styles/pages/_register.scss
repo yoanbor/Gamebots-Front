@@ -1,4 +1,4 @@
-@import "../settings";
+@import "../settings.scss";
 
 .register {
   display: grid;
@@ -10,29 +10,6 @@
   }
 
   .register-right-part {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      text-transform: uppercase;
-      color: $secondaryColor-Medium;
-      font-size: 4rem;
-      font-weight: bold;
-      line-height: 60px;
-      margin-bottom: 90px;
-      font-family: $displayFont-H2;
-
-      @media screen and (max-width: 900px) {
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-
-      @media screen and (max-height: 800px) {
-        margin-bottom: 15px;
-      }
-    }
 
     .form-container {
 
@@ -55,38 +32,6 @@
         }
 
         .labels {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 30px;
-
-          @media screen and (max-width: 900px) {
-            margin-bottom: 10px;
-          }
-
-          @media screen and (max-height: 800px) {
-            margin-bottom: 5px;
-          }
-
-          .label {
-            z-index: 10;
-            transform: translateX(10px);
-            background-color: white;
-          }
-
-          #label-pseudo {
-            padding-left: 7px;
-            max-width: 15%;
-          }
-
-          #label-email {
-            padding-left: 7px;
-            max-width: 13%;
-          }
-
-          #label-password {
-            padding-left: 7px;
-            max-width: 24%;
-          }
 
           #label-confirmPassword {
             padding-left: 7px;
@@ -116,7 +61,7 @@
 
         .checkbox {
           width: 466.11px;
-          color: #23222D;
+          color: var(--textColor);
 
           input[type="checkbox"] {
             margin-top: 20px;
@@ -126,19 +71,15 @@
               margin-top: 5px;
             }
           }
-
-          a {
-            color: $secondaryColor-Medium;
-          }
         }
 
         input[type="submit"] {
           height: 65px;
           width: 194.05px;
           border-radius: 8px;
-          color: $white;
-          background-color: $primaryColor-Medium;
-          border-color: $primaryColor-Medium;
+          color: var(--mainActionTextColor);
+          background-color: var(--mainActionColor);
+          border-color: var(--mainActionColor);
           margin-top: 50px;
           cursor: pointer;
 
@@ -150,12 +91,11 @@
     }
 
     p {
-      color: #23222D;
 
       #need-to-login {
-      color: $secondaryColor-Medium;
-      font-weight: bold;
-      text-decoration: none;
+        color: var(--tertiaryActionColor);
+        font-weight: bold;
+        text-decoration: none;
       }
     }
   }

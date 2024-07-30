@@ -14,9 +14,8 @@
         justify-content: center;
         align-items: flex-start;
 
-        h1 {
+        h2 {
           text-transform: uppercase;
-          color: $secondaryColor-Highter;
           font-size: 3rem;
           font-family: $displayFont-H3;
           word-wrap: break-word;
@@ -42,38 +41,6 @@
             }
 
             .labels {
-              display: flex;
-              flex-direction: column;
-              margin-bottom: 30px;
-
-              @media screen and (max-width: 900px) {
-                margin-bottom: 10px;
-              }
-
-              @media screen and (max-height: 800px) {
-                margin-bottom: 5px;
-              }
-
-              .label {
-                z-index: 10;
-                transform: translateX(10px);
-                background-color: white;
-              }
-
-              #label-pseudo {
-                padding-left: 7px;
-                max-width: 15%;
-              }
-
-              #label-email {
-                padding-left: 7px;
-                max-width: 13%;
-              }
-
-              #label-password {
-                padding-left: 7px;
-                max-width: 24%;
-              }
 
               #label-phone {
                 padding-left: 7px;
@@ -118,21 +85,21 @@
             .delete-button {
               background-color: transparent;
               border: none;
-              color: rgba(153, 27, 27, 1);
+              color: $dangerColor;
             }
 
             .cancel-button {
               border-radius: 8px;
-              color: $primaryColor-Medium;
-              background-color: rgba(255, 237, 213, 1);
-              border-color: rgba(255, 237, 213, 1);
+              color: var(--mainActionColor);
+              background-color: var(--secondaryActionColor);
+              border-color: var(--secondaryActionColor);
             }
 
             input[type="submit"] {
               border-radius: 8px;
-              color: $white;
-              background-color: $primaryColor-Medium;
-              border-color: $primaryColor-Medium;
+              color: var(--mainActionTextColor);
+              background-color: var(--mainActionColor);
+              border-color: var(--mainActionColor);
               cursor: pointer;
             }
           }
@@ -146,6 +113,8 @@
 
           a {
             margin-bottom: 10px;
+            text-decoration: none;
+            color: var(--textColor);
           }
         }
       }

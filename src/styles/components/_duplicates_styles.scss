@@ -1,0 +1,61 @@
+@import "../settings.scss";
+
+.login-right-part, .register-right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 60px;
+    margin-bottom: 90px;
+    font-family: $displayFont-H2;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-height: 800px) {
+      margin-bottom: 15px;
+    }
+  }
+};
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 900px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-height: 800px) {
+    margin-bottom: 5px;
+  }
+
+  .label {
+    z-index: 10;
+    transform: translate(0px, -10px);
+    color: var(--textColor);
+  }
+
+  #label-pseudo {
+    padding-left: 7px;
+    max-width: 15%;
+  }
+
+  #label-email {
+    padding-left: 7px;
+    max-width: 13%;
+  }
+
+  #label-password {
+    padding-left: 7px;
+    max-width: 24%;
+  }
+};
