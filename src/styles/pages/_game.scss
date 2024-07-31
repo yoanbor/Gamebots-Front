@@ -1,0 +1,42 @@
+@import "../settings.scss";
+
+main {
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+
+    .game-part {
+
+      .informations-container {
+        display: flex;
+
+        .informations-left-part {
+
+          .informations {
+            display: flex;
+          }
+
+          .platform {
+            display: flex;
+          }
+
+          .numbersPlayers {
+            display: flex;
+          }
+
+          .releaseDate {
+            display: flex;
+          }
+        }
+
+        .informations-right-part {
+          .history {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+};
