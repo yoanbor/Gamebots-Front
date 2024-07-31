@@ -802,6 +802,17 @@ header .header-right-part {
 header .header-right-part #switch-dark-light {
   background-color: transparent;
   border: none;
+  margin-right: 40px;
+}
+@media screen and (max-width: 1300px) {
+  header .header-right-part #switch-dark-light {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header-right-part #switch-dark-light {
+    margin-right: 5%;
+  }
 }
 header .header-right-part form {
   margin-right: 35px;
@@ -815,6 +826,12 @@ header .header-right-part form input {
 @media screen and (max-width: 1080px) {
   header .header-right-part form input {
     width: 200px;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header-right-part form input {
+    margin-right: 30%;
+    width: 300px;
   }
 }
 header .header-right-part .my-account {
