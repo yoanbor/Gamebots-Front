@@ -1097,6 +1097,11 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.account-page .account-page-container .account-left-part img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
 .account-page .account-page-container .account-right-part {
   margin: 0 auto;
 }

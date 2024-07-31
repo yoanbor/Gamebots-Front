@@ -9,7 +9,7 @@ import { getAndRegisterUserAccountIdToLocalStorage } from "../business/account/g
 import { fetchUserData } from "../business/account/fetchUserData.jsx";
 import { resetInputs } from "../business/account/resetInputs.jsx";
 import { deleteAccount } from "../business/account/deleteAccount.jsx";
-
+import AvatarImages from "../business/account/AvatarImages.jsx";
 
 const Account = () => {
     const [inputType, setInputType] = useState('password');
@@ -28,15 +28,21 @@ const Account = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (!userAccountId) {
-            getAndRegisterUserAccountIdToLocalStorage(setUserAccountId, setError);
-        }
+        const fetchAccountId = async () => {
+            if (!userAccountId) {
+                await getAndRegisterUserAccountIdToLocalStorage(setUserAccountId, setError);
+            }
+        };
+        fetchAccountId();
     }, [userAccountId]);
 
     useEffect(() => {
-        if (userAccountId) {
-            fetchUserData(userAccountId, setUserId, setPseudo, setEmail, setPassword, setPhoneNumber, setDefaultPseudo, setDefaultEmail, setDefaultPhoneNumber, setError);
-        }
+        const fetchData = async () => {
+            if (userAccountId) {
+                await fetchUserData(userAccountId, setUserId, setPseudo, setEmail, setPassword, setPhoneNumber, setDefaultPseudo, setDefaultEmail, setDefaultPhoneNumber, setError);
+            }
+        };
+        fetchData();
     }, [userAccountId]);
 
     const resetInputsHandler = () => {
@@ -51,8 +57,8 @@ const Account = () => {
         <div className="account-page">
             <Header />
             <div className="account-page-container">
-                <div className="left-part">
-                    <h1>Hey</h1>
+                <div className="account-left-part">
+                    <AvatarImages />
                 </div>
                 <div className="account-right-part">
                     <div className="informations-part">
