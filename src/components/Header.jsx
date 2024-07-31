@@ -32,7 +32,9 @@ const Header = ({ onSearch }) => {
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
-        onSearch(event.target.value);
+        if (onSearch) {
+            onSearch(event.target.value);
+        }
     };
 
     return (
@@ -84,7 +86,7 @@ const Header = ({ onSearch }) => {
 };
 
 Header.propTypes = {
-    onSearch: PropTypes.func.isRequired,
+    onSearch: PropTypes.func,
 };
 
 export default Header;
