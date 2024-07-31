@@ -6,11 +6,16 @@ import { fetchGameData } from "../business/home/fetchGameData.jsx";
 const Home = () => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
-            await fetchGameData(setData, setError);
+            try {
+                await fetchGameData(setData, setError);
+            } catch (err) {
+                setError(err);
+            }
         };
         fetchData();
     }, []);
@@ -19,16 +24,24 @@ const Home = () => {
         navigate(`/game/${idGame}`);
     };
 
+    const handleSearch = (term) => {
+        setSearchTerm(term);
+    };
+
+    const filteredData = data ? data.filter(game =>
+        game.title.toLowerCase().includes(searchTerm.toLowerCase())
+    ) : [];
+
     return (
         <div className="home-page">
-            <Header />
+            <Header onSearch={handleSearch} />
             <div>
-                {error && <div>Erreur lors de la récupération des données : {error.message}</div>}
+                {error && <div className="error-message">Erreur lors de la récupération des données : {error.message}</div>}
                 {data ? (
                     <div className="games-list">
                         <h2>Tous les jeux</h2>
                         <ul>
-                            {data.map(game => (
+                            {filteredData.map(game => (
                                 <li key={game.idGame} onClick={() => handleGameClick(game.idGame)}>
                                     <div className="games">
                                         {game.bannerImage && <img src={game.bannerImage.source} alt={game.title} />}
@@ -39,7 +52,7 @@ const Home = () => {
                         </ul>
                     </div>
                 ) : (
-                    !error && <div>Chargement des données...</div>
+                    !error && <div className="loading-message">Chargement des données...</div>
                 )}
             </div>
         </div>
