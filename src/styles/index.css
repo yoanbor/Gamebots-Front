@@ -840,6 +840,11 @@ header .header-right-part .my-account {
   border-radius: 8px;
   cursor: pointer;
 }
+header .header-right-part .my-account img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
 header .my-account-container {
   display: flex;
   flex-direction: column;
@@ -866,6 +871,7 @@ header .my-account-container .go-to-my-account img,
 header .my-account-container .disconnect img {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
 header .my-account-container .go-to-my-account p,
 header .my-account-container .disconnect p {
