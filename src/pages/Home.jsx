@@ -10,14 +10,23 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        let isMounted = true;
+
         const fetchData = async () => {
             try {
-                await fetchGameData(setData, setError);
+                await fetchGameData((games) => {
+                    if (isMounted) setData(games);
+                }, setError);
             } catch (err) {
-                setError(err);
+                if (isMounted) setError(err);
             }
         };
+
         fetchData();
+
+        return () => {
+            isMounted = false;
+        };
     }, []);
 
     const handleGameClick = (idGame) => {
@@ -44,7 +53,13 @@ const Home = () => {
                             {filteredData.map(game => (
                                 <li key={game.idGame} onClick={() => handleGameClick(game.idGame)}>
                                     <div className="games">
-                                        {game.bannerImage && <img src={game.bannerImage.source} alt={game.title} />}
+                                        {game.bannerImage ? (
+                                            <img src={game.bannerImage.source} alt={`Bannière de ${game.title}`} />
+                                        ) : (
+                                            <div className="placeholder-banner" style={{ backgroundColor: '#ccc', height: '100px', width: '200px' }}>
+                                                Image indisponible
+                                            </div>
+                                        )}
                                         <h3>{game.title}</h3>
                                     </div>
                                 </li>
