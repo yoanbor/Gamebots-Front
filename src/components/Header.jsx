@@ -1,25 +1,46 @@
 import { useState, useCallback, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { MoonIcon } from "../assets/icons/moon.jsx";
-import { SunMoonIcon } from "../assets/icons/sun-moon.jsx";
 import PropTypes from 'prop-types';
+import { MoonIcon } from "../assets/icons/moon.jsx";
+import getUserAccountByUserIdController from "../controllers/user/GetUserAccountByUserIdController.jsx";
+import {SunMoonIcon} from "../assets/icons/sun-moon.jsx";
 
 const Header = ({ onSearch }) => {
-    const [isMyAccountVisible, setIsMyAccountVisible] = useState(false);
     const navigate = useNavigate();
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const [searchTerm, setSearchTerm] = useState('');
+    const [userAvatar, setUserAvatar] = useState('');
+    const [selectedAvatarId, setSelectedAvatarId] = useState(null);
+    const [isMyAccountVisible, setIsMyAccountVisible] = useState(false);
 
-    const toggleMyAccountContainer = useCallback(() => {
-        setIsMyAccountVisible(prev => !prev);
+    const fetchUserAvatar = useCallback(async () => {
+        try {
+            const userAccountId = localStorage.getItem('userAccountId');
+            if (userAccountId) {
+                const user = await getUserAccountByUserIdController(userAccountId);
+                if (user && user.image && user.image.source) {
+                    setUserAvatar(user.image.source);
+                    setSelectedAvatarId(user.image.idImage);
+                }
+            }
+        } catch (error) {
+            console.error("Erreur lors de la récupération de l'avatar utilisateur", error);
+        }
     }, []);
 
-    const handleLogout = useCallback(() => {
-        localStorage.removeItem('token');
-        localStorage.removeItem('username');
-        localStorage.removeItem('userAccountId');
-        navigate('/login');
-    }, [navigate]);
+    useEffect(() => {
+        fetchUserAvatar();
+
+        const handleAvatarUpdate = () => {
+            fetchUserAvatar();
+        };
+
+        window.addEventListener('avatarUpdated', handleAvatarUpdate);
+
+        return () => {
+            window.removeEventListener('avatarUpdated', handleAvatarUpdate);
+        };
+    }, [fetchUserAvatar]);
 
     useEffect(() => {
         document.body.className = theme === 'dark' ? 'dark-theme' : 'light-theme';
@@ -27,14 +48,29 @@ const Header = ({ onSearch }) => {
     }, [theme]);
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-    }
+        setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
+    };
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
         if (onSearch) {
             onSearch(event.target.value);
         }
+    };
+
+    const toggleMyAccountContainer = () => {
+        setIsMyAccountVisible(prev => !prev);
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem('userAccountId');
+        localStorage.removeItem('username');
+        localStorage.removeItem('token');
+        navigate('/login');
+    };
+
+    const handleAccountClick = () => {
+        navigate('/account', { state: { initialAvatarId: selectedAvatarId } });
     };
 
     return (
@@ -46,7 +82,7 @@ const Header = ({ onSearch }) => {
                 </NavLink>
             </div>
             <div className="header-right-part">
-                <button id={"switch-dark-light"} onClick={toggleTheme}>
+                <button id="switch-dark-light" onClick={toggleTheme}>
                     {theme === 'dark' ? <MoonIcon /> : <SunMoonIcon />}
                 </button>
                 <form>
@@ -64,16 +100,14 @@ const Header = ({ onSearch }) => {
                     aria-haspopup="true"
                     aria-expanded={isMyAccountVisible}
                 >
-                    <img src="/avatars/AvatarPath.png" alt="avatar utilisateur" />
+                    <img src={userAvatar} alt="avatar utilisateur" />
                 </button>
                 {isMyAccountVisible && (
                     <div className="my-account-container">
-                        <NavLink to={"/account"} onClick={() => setIsMyAccountVisible(false)}>
-                            <div className="go-to-my-account">
-                                <img src="/avatars/AvatarPath.png" alt="avatar utilisateur" />
-                                <p>Mon compte</p>
-                            </div>
-                        </NavLink>
+                        <div className="go-to-my-account" onClick={handleAccountClick}>
+                            <img src={userAvatar} alt="avatar utilisateur" />
+                            <p>Mon compte</p>
+                        </div>
                         <button onClick={handleLogout} className="disconnect">
                             <img src="/icons/User-xuser.svg" alt="icon déconnexion" />
                             <p>Se déconnecter</p>
