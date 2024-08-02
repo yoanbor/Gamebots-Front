@@ -45,6 +45,7 @@
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -134,6 +135,7 @@ button {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -349,6 +351,7 @@ button {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -524,6 +527,7 @@ button {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -718,6 +722,7 @@ button {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -931,6 +936,7 @@ header .my-account-container .disconnect {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -1057,6 +1063,7 @@ button {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -1099,23 +1106,109 @@ button {
   cursor: pointer;
 }
 
+.account-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .account-page .account-page-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
+  flex: 1;
 }
-.account-page .account-page-container .account-left-part img {
-  width: 150px;
-  height: 150px;
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container {
+    grid-template-columns: 1fr;
+  }
+}
+.account-page .account-page-container .account-left-part {
+  position: relative;
+}
+.account-page .account-page-container .account-left-part .avatar-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1100px) {
+  .account-page .account-page-container .account-left-part .avatar-images {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container .account-left-part .avatar-images {
+    flex-direction: row;
+  }
+}
+.account-page .account-page-container .account-left-part .avatar-images .avatar-image {
+  position: absolute;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+@media screen and (max-width: 1100px) {
+  .account-page .account-page-container .account-left-part .avatar-images .avatar-image {
+    position: static;
+    transform: none !important;
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .account-page .account-page-container .account-left-part .avatar-images .avatar-image {
+    width: 75px !important;
+    height: 75px !important;
+  }
+}
+.account-page .account-page-container .account-left-part .avatar-images .avatar-image.selected {
+  z-index: 10;
+}
+@media screen and (max-width: 1100px) {
+  .account-page .account-page-container .account-left-part .avatar-images .avatar-image.selected {
+    position: static;
+    transform: none !important;
+    width: 200px !important;
+    height: 200px !important;
+    transition: all 0s ease;
+  }
+}
+@media screen and (max-width: 700px) {
+  .account-page .account-page-container .account-left-part .avatar-images .avatar-image.selected {
+    position: static;
+    transform: none !important;
+    width: 100px !important;
+    height: 100px !important;
+    transition: all 0s ease;
+  }
 }
 .account-page .account-page-container .account-right-part {
-  margin: 0 auto;
+  margin: auto;
+  height: 100%;
+}
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container .account-right-part {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container .account-right-part {
+    height: auto;
+  }
 }
 .account-page .account-page-container .account-right-part .informations-part {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-around;
+}
+@media screen and (max-width: 900px) {
+  .account-page .account-page-container .account-right-part .informations-part {
+    height: auto;
+  }
 }
 .account-page .account-page-container .account-right-part .informations-part h2 {
   text-transform: uppercase;
@@ -1125,82 +1218,72 @@ button {
   max-width: 370px;
   margin-bottom: 50px;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .form {
   display: grid;
 }
-@media screen and (max-width: 900px) {
-  .account-page .account-page-container .account-right-part .informations-part .form-container .form {
-    margin-bottom: 50px;
-  }
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .form .labels-account {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
-@media screen and (max-height: 900px) {
-  .account-page .account-page-container .account-right-part .informations-part .form-container .form {
-    margin-bottom: 50px;
-  }
-}
-@media screen and (max-height: 800px) {
-  .account-page .account-page-container .account-right-part .informations-part .form-container .form {
-    margin-bottom: 15px;
-  }
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels #label-phone {
-  padding-left: 7px;
-  max-width: 37%;
-}
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .labels .inputs {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .form .inputs {
   width: 466.11px;
   height: 48px;
   border-radius: 8px;
   padding: 0 0 0 15px;
-  transform: translateY(-10px);
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .field, .account-page .account-page-container .account-right-part .informations-part .form-container .form .field-password {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .form #label-phone {
+  padding-left: 7px;
+  max-width: 37%;
+}
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password {
   position: relative;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-container .form .password-toggle svg {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password .password-toggle svg {
   position: absolute;
-  top: 20px;
+  top: 30%;
   right: 15px;
   color: #CBD5E1;
   cursor: pointer;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .button-container {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   width: 100%;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .button-container .delete-button,
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .button-container .cancel-button,
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .button-container input[type=submit] {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container .delete-button,
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container .cancel-button,
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container input[type=submit] {
   height: 65px;
   width: 30%;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .delete-button {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container .delete-button {
   background-color: transparent;
   border: none;
   color: rgb(153, 27, 27);
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form .cancel-button {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container .cancel-button {
   border-radius: 8px;
   color: var(--mainActionColor);
   background-color: var(--secondaryActionColor);
   border-color: var(--secondaryActionColor);
 }
-.account-page .account-page-container .account-right-part .informations-part .form-container .form input[type=submit] {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container input[type=submit] {
   border-radius: 8px;
   color: var(--mainActionTextColor);
   background-color: var(--mainActionColor);
   border-color: var(--mainActionColor);
   cursor: pointer;
 }
-.account-page .account-page-container .account-right-part .informations-part .mentions {
+.account-page .account-page-container .account-right-part .mentions {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 350px 125px;
+  width: 100%;
 }
-.account-page .account-page-container .account-right-part .informations-part .mentions a {
+.account-page .account-page-container .account-right-part .mentions a {
   margin-bottom: 10px;
   text-decoration: none;
   color: var(--textColor);
@@ -1253,6 +1336,7 @@ button {
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {
@@ -1366,6 +1450,7 @@ main .main .game-part .informations-container .informations-right-part .history 
 
 body {
   background-color: var(--backgroundColor);
+  height: 100%;
 }
 
 h1 {

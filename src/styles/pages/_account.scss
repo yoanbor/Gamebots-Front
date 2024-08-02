@@ -1,25 +1,103 @@
 @import "../settings.scss";
 
 .account-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   .account-page-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 100%;
+    flex: 1;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
 
     .account-left-part {
-        img {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
+
+      position: relative;
+
+      .avatar-images {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width: 1100px) {
+          position: static;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
         }
+
+        @media screen and (max-width: 900px) {
+          flex-direction: row;
+        }
+
+        .avatar-image {
+          position: absolute;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          @media screen and (max-width: 1100px) {
+            position: static;
+            transform: none !important;
+            width: 100px !important;
+            height: 100px !important;
+          }
+
+          @media screen and (max-width: 1100px) {
+            width: 75px !important;
+            height: 75px !important;
+          }
+
+          &.selected {
+            z-index: 10;
+
+            @media screen and (max-width: 1100px) {
+              position: static;
+              transform: none !important;
+              width: 200px !important;
+              height: 200px !important;
+              transition: all 0s ease;
+            }
+
+            @media screen and (max-width: 700px) {
+              position: static;
+              transform: none !important;
+              width: 100px !important;
+              height: 100px !important;
+              transition: all 0s ease;
+            }
+          }
+        }
+      }
     }
+
     .account-right-part {
-      margin: 0 auto;
+      margin: auto;
+      height: 100%;
+
+      @media screen and (max-width: 900px) {
+        margin-top: 100px;
+      }
+
+      @media screen and (max-width: 900px) {
+        height: auto;
+      }
 
       .informations-part {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: space-around;
+
+        @media screen and (max-width: 900px) {
+          height: auto;
+        }
 
         h2 {
           text-transform: uppercase;
@@ -30,49 +108,39 @@
           margin-bottom: 50px;
         }
 
-        .form-container {
-
+        .form-account-container {
           .form {
             display: grid;
 
-            @media screen and (max-width: 900px) {
-              margin-bottom: 50px;
+            .labels-account {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 30px;
             }
-
-            @media screen and (max-height: 900px) {
-              margin-bottom: 50px;
-            }
-
-            @media screen and (max-height: 800px) {
-              margin-bottom: 15px;
-            }
-
-            .labels {
-
-              #label-phone {
-                padding-left: 7px;
-                max-width: 37%;
-              }
 
               .inputs {
                 width: 466.11px;
                 height: 48px;
                 border-radius: 8px;
                 padding: 0 0 0 15px;
-                transform: translateY(-10px);
+              }
+
+              #label-phone {
+                padding-left: 7px;
+                max-width: 37%;
               }
             }
 
             .field, .field-password {
               position: relative;
-            }
 
-            .password-toggle svg, .password-toggle svg {
-              position: absolute;
-              top: 20px;
-              right: 15px;
-              color: #CBD5E1;
-              cursor: pointer;
+              .password-toggle svg, .password-toggle svg {
+                position: absolute;
+                top: 30%;
+                right: 15px;
+                color: #CBD5E1;
+                cursor: pointer;
+              }
             }
 
             .button-container {
@@ -87,36 +155,37 @@
                 height: 65px;
                 width: 30%;
               }
-            }
 
-            .delete-button {
-              background-color: transparent;
-              border: none;
-              color: $dangerColor;
-            }
+              .delete-button {
+                background-color: transparent;
+                border: none;
+                color: $dangerColor;
+              }
 
-            .cancel-button {
-              border-radius: 8px;
-              color: var(--mainActionColor);
-              background-color: var(--secondaryActionColor);
-              border-color: var(--secondaryActionColor);
-            }
+              .cancel-button {
+                border-radius: 8px;
+                color: var(--mainActionColor);
+                background-color: var(--secondaryActionColor);
+                border-color: var(--secondaryActionColor);
+              }
 
-            input[type="submit"] {
-              border-radius: 8px;
-              color: var(--mainActionTextColor);
-              background-color: var(--mainActionColor);
-              border-color: var(--mainActionColor);
-              cursor: pointer;
+              input[type="submit"] {
+                border-radius: 8px;
+                color: var(--mainActionTextColor);
+                background-color: var(--mainActionColor);
+                border-color: var(--mainActionColor);
+                cursor: pointer;
+              }
             }
           }
         }
 
         .mentions {
+          margin-top: 50px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 350px 125px;
+          width: 100%;
 
           a {
             margin-bottom: 10px;
@@ -127,4 +196,3 @@
       }
     }
   }
-}
