@@ -37,8 +37,6 @@ export const handleSubmitForAccount = async (
         await modifyUserAccountController(updatedUser);
         setError('Modification réussie');
 
-        const avatarUrl = updatedUser.imageId ? `/avatars/${updatedUser.imageId}.png` : '/avatars/defaultAvatar.png';
-        localStorage.setItem('userAvatar', avatarUrl);
         window.dispatchEvent(new Event('avatarUpdated'));
 
     } catch (error) {
