@@ -8,7 +8,10 @@ const modifyUserAccount = async (user) => {
             username: user.username,
             phone: user.phone,
             email: user.email,
-            password: user.password
+            password: user.password,
+            image: {
+                idImage: user.imageId
+            }
         }, {
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -17,7 +20,7 @@ const modifyUserAccount = async (user) => {
         });
         return response.data;
     } catch (error) {
-        console.log("Erreur lors de la modification de l'utilisateur", error.response ? error.response.data : error.message);
+        console.error("Erreur lors de la modification de l'utilisateur", error.response ? error.response.data : error.message);
         throw error;
     }
 };
