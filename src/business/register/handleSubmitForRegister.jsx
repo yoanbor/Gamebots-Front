@@ -1,8 +1,21 @@
+import getUserAccountByUsernameController from "../../controllers/user/GetUserAccountByUsernameController.jsx";
+import loginUserController from "../../controllers/config/AuthController.jsx";
 import User from "../../models/User.jsx";
 import createUserAccountController from "../../controllers/user/CreateUserAccountController.jsx";
-import loginUserController from "../../controllers/config/AuthController.jsx";
 
-export const handleSubmitForRegister = async (e, pseudo, email, password, confirmPassword, setError, navigate, setPseudo, setEmail, setPassword, setConfirmPassword) => {
+export const handleSubmitForRegister = async (
+    e,
+    pseudo,
+    email,
+    password,
+    confirmPassword,
+    setError,
+    navigate,
+    setPseudo,
+    setEmail,
+    setPassword,
+    setConfirmPassword
+) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -10,7 +23,18 @@ export const handleSubmitForRegister = async (e, pseudo, email, password, confir
         return;
     }
 
-    const newUser = new User(null, pseudo, null, email, password, new Date(), null, null);
+    const defaultAvatarId = 1;
+
+    const newUser = new User(
+        null,
+        pseudo,
+        null,
+        email,
+        password,
+        new Date(),
+        null,
+        { idImage: defaultAvatarId }
+    );
 
     try {
         await createUserAccountController(newUser);
@@ -21,6 +45,10 @@ export const handleSubmitForRegister = async (e, pseudo, email, password, confir
         if (response && response.data) {
             localStorage.setItem('token', response.data);
             localStorage.setItem('username', pseudo);
+
+            const userAccountId = await getUserAccountByUsernameController(pseudo);
+            localStorage.setItem('userAccountId', userAccountId);
+
             setPseudo("");
             setEmail("");
             setPassword("");
