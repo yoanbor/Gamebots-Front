@@ -1,4 +1,6 @@
-const getImageBannerByGameId = async (gameId) => {
+import getImageBannerByGameId from "../../services/image/GetImageBannerByGameIdService.jsx";
+
+const getImageBannerByGameIdController = async (gameId) => {
     try {
         return getImageBannerByGameId(gameId);
     } catch (error) {
@@ -7,4 +9,4 @@ const getImageBannerByGameId = async (gameId) => {
     }
 }
 
-export default getImageBannerByGameId;
+export default getImageBannerByGameIdController;
