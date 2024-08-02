@@ -1,17 +1,19 @@
-import { useRef, useState, useEffect } from "react";
-import Header from "../components/Header.jsx";
-import { NavLink, useNavigate } from "react-router-dom";
-import { EyeOffIcon } from "../assets/icons/eye-off.jsx";
-import { EyeIcon } from "../assets/icons/eye.jsx";
+import { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { togglePassword } from "../business/togglePassword.jsx";
-import { handleSubmitForAccount } from "../business/account/handleSubmitForAccount.jsx";
 import { getAndRegisterUserAccountIdToLocalStorage } from "../business/account/getAndRegisterUserAccountIdToLocalStorage.jsx";
 import { fetchUserData } from "../business/account/fetchUserData.jsx";
 import { resetInputs } from "../business/account/resetInputs.jsx";
 import { deleteAccount } from "../business/account/deleteAccount.jsx";
+import Header from "../components/Header.jsx";
 import AvatarImages from "../business/account/AvatarImages.jsx";
+import { handleSubmitForAccount } from "../business/account/handleSubmitForAccount.jsx";
+import { EyeOffIcon } from "../assets/icons/eye-off.jsx";
+import { EyeIcon } from "../assets/icons/eye.jsx";
 
 const Account = () => {
+    const location = useLocation();
+    const initialAvatarId = location.state?.initialAvatarId || null;
     const [inputType, setInputType] = useState('password');
     const passwordInput = useRef(null);
     const handleTogglePassword = () => togglePassword(passwordInput, setInputType);
@@ -20,11 +22,9 @@ const Account = () => {
     const [password, setPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [error, setError] = useState(null);
-    const [defaultPseudo, setDefaultPseudo] = useState('');
-    const [defaultEmail, setDefaultEmail] = useState('');
-    const [defaultPhoneNumber, setDefaultPhoneNumber] = useState('');
     const [userId, setUserId] = useState(null);
     const [userAccountId, setUserAccountId] = useState(localStorage.getItem('userAccountId'));
+    const [selectedImageId, setSelectedImageId] = useState(initialAvatarId);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -39,18 +39,33 @@ const Account = () => {
     useEffect(() => {
         const fetchData = async () => {
             if (userAccountId) {
-                await fetchUserData(userAccountId, setUserId, setPseudo, setEmail, setPassword, setPhoneNumber, setDefaultPseudo, setDefaultEmail, setDefaultPhoneNumber, setError);
+                await fetchUserData(userAccountId, setUserId, setPseudo, setEmail, setPassword, setPhoneNumber, setPseudo, setEmail, setPhoneNumber, setError);
             }
         };
         fetchData();
     }, [userAccountId]);
 
     const resetInputsHandler = () => {
-        resetInputs(setPseudo, setEmail, setPassword, setPhoneNumber, defaultPseudo, defaultEmail, defaultPhoneNumber);
+        resetInputs(setPseudo, setEmail, setPassword, setPhoneNumber, pseudo, email, phoneNumber);
     };
 
     const deleteAccountHandler = async () => {
         await deleteAccount(navigate, setError);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleSubmitForAccount(
+            e,
+            userAccountId,
+            password.trim() !== "" ? password : null,
+            userId,
+            pseudo,
+            phoneNumber,
+            email,
+            setError,
+            selectedImageId
+        );
     };
 
     return (
@@ -58,23 +73,23 @@ const Account = () => {
             <Header />
             <div className="account-page-container">
                 <div className="account-left-part">
-                    <AvatarImages />
+                    <AvatarImages setSelectedImageId={setSelectedImageId} selectedImageId={selectedImageId} setError={setError} />
                 </div>
                 <div className="account-right-part">
                     <div className="informations-part">
                         <h2>Modifier mes informations</h2>
-                        <div className="form-container">
-                            <form className="form" onSubmit={(e) => handleSubmitForAccount(e, userAccountId, password, userId, pseudo, phoneNumber, email, setError)}>
-                                <label className="labels">
+                        <div className="form-account-container">
+                            <form className="form" onSubmit={handleSubmit}>
+                                <label className="labels-account">
                                     <p className='label' id="label-pseudo">Pseudo</p>
                                     <input type="text" className="inputs" required placeholder="Herobrine" autoComplete="username" value={pseudo} onChange={(e) => setPseudo(e.target.value)} />
                                 </label>
-                                <label className="labels">
+                                <label className="labels-account">
                                     <p className='label' id="label-email">Email</p>
                                     <input type="email" className="inputs" required placeholder="stevelapioche@mc.com" value={email} autoComplete="email" onChange={(e) => setEmail(e.target.value)} />
                                 </label>
                                 <div className="field field-password">
-                                    <label className="labels">
+                                    <label className="labels-account">
                                         <p className='label' id="label-password">Mot de passe</p>
                                         <input type={inputType} ref={passwordInput} className="inputs" id="password1" autoComplete="new-password" placeholder="••••••••••••••••" value={password} onChange={(e) => setPassword(e.target.value)} />
                                     </label>
@@ -82,7 +97,7 @@ const Account = () => {
                                         {inputType === 'password' ? <EyeOffIcon /> : <EyeIcon />}
                                     </div>
                                 </div>
-                                <label className="labels">
+                                <label className="labels-account">
                                     <p className='label' id="label-phone">Numéro de téléphone</p>
                                     <input type="tel" className="inputs" placeholder="00.00.00.00.00" autoComplete="tel" value={phoneNumber} pattern="[0-9]{10}" onChange={(e) => setPhoneNumber(e.target.value)} />
                                 </label>
