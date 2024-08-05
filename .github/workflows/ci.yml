@@ -16,9 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ["21.6.0"]
-        # Si vous avez besoin de plusieurs architectures, vous pouvez les ajouter ici
-        # platform: ["linux/amd64", "linux/arm64"]
+        node-version: ['21.6.0']
 
     steps:
       - name: Checkout code
@@ -28,7 +26,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
