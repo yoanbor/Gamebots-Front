@@ -1,6 +1,7 @@
-@import "../settings.scss";
+@import '../settings.scss';
 
-.login-right-part, .register-right-part {
+.login-right-part,
+.register-right-part {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +24,7 @@
       margin-bottom: 15px;
     }
   }
-};
+}
 
 .labels {
   display: flex;
@@ -58,4 +59,4 @@
     padding-left: 7px;
     max-width: 24%;
   }
-};
+}

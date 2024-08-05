@@ -1,4 +1,4 @@
-@import "../settings.scss";
+@import '../settings.scss';
 
 .account-page {
   height: 100vh;
@@ -16,7 +16,6 @@
     }
 
     .account-left-part {
-
       position: relative;
 
       .avatar-images {
@@ -118,81 +117,83 @@
               margin-bottom: 30px;
             }
 
-              .inputs {
-                width: 466.11px;
-                height: 48px;
-                border-radius: 8px;
-                padding: 0 0 0 15px;
-              }
-
-              #label-phone {
-                padding-left: 7px;
-                max-width: 37%;
-              }
+            .inputs {
+              width: 466.11px;
+              height: 48px;
+              border-radius: 8px;
+              padding: 0 0 0 15px;
             }
 
-            .field, .field-password {
-              position: relative;
+            #label-phone {
+              padding-left: 7px;
+              max-width: 37%;
+            }
+          }
 
-              .password-toggle svg, .password-toggle svg {
-                position: absolute;
-                top: 30%;
-                right: 15px;
-                color: #CBD5E1;
-                cursor: pointer;
-              }
+          .field,
+          .field-password {
+            position: relative;
+
+            .password-toggle svg,
+            .password-toggle svg {
+              position: absolute;
+              top: 30%;
+              right: 15px;
+              color: #cbd5e1;
+              cursor: pointer;
+            }
+          }
+
+          .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 100%;
+
+            .delete-button,
+            .cancel-button,
+            input[type='submit'] {
+              height: 65px;
+              width: 30%;
             }
 
-            .button-container {
-              display: flex;
-              justify-content: space-between;
-              margin-top: 20px;
-              width: 100%;
+            .delete-button {
+              background-color: transparent;
+              border: none;
+              color: $dangerColor;
+            }
 
-              .delete-button,
-              .cancel-button,
-              input[type="submit"] {
-                height: 65px;
-                width: 30%;
-              }
+            .cancel-button {
+              border-radius: 8px;
+              color: var(--mainActionColor);
+              background-color: var(--secondaryActionColor);
+              border-color: var(--secondaryActionColor);
+            }
 
-              .delete-button {
-                background-color: transparent;
-                border: none;
-                color: $dangerColor;
-              }
-
-              .cancel-button {
-                border-radius: 8px;
-                color: var(--mainActionColor);
-                background-color: var(--secondaryActionColor);
-                border-color: var(--secondaryActionColor);
-              }
-
-              input[type="submit"] {
-                border-radius: 8px;
-                color: var(--mainActionTextColor);
-                background-color: var(--mainActionColor);
-                border-color: var(--mainActionColor);
-                cursor: pointer;
-              }
+            input[type='submit'] {
+              border-radius: 8px;
+              color: var(--mainActionTextColor);
+              background-color: var(--mainActionColor);
+              border-color: var(--mainActionColor);
+              cursor: pointer;
             }
           }
         }
+      }
 
-        .mentions {
-          margin-top: 50px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
+      .mentions {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
 
-          a {
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: var(--textColor);
-          }
+        a {
+          margin-bottom: 10px;
+          text-decoration: none;
+          color: var(--textColor);
         }
       }
     }
   }
+}

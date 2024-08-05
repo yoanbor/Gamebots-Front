@@ -1,10 +1,10 @@
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -68,16 +68,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -90,11 +91,11 @@ button {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -158,16 +159,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -279,7 +281,8 @@ button {
   flex-direction: column;
   align-items: flex-end;
 }
-.left-part .img-gamebot, .left-part .message-user {
+.left-part .img-gamebot,
+.left-part .message-user {
   margin-right: 15px;
 }
 .left-part .msg {
@@ -306,11 +309,11 @@ button {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -374,16 +377,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -436,14 +440,16 @@ button {
   padding: 0 0 0 15px;
   transform: translateY(-10px);
 }
-.register .register-right-part .form-container .form .field, .register .register-right-part .form-container .form .field-password {
+.register .register-right-part .form-container .form .field,
+.register .register-right-part .form-container .form .field-password {
   position: relative;
 }
-.register .register-right-part .form-container .form .password-toggle svg, .register .register-right-part .form-container .form .password-toggle svg {
+.register .register-right-part .form-container .form .password-toggle svg,
+.register .register-right-part .form-container .form .password-toggle svg {
   position: absolute;
   top: 20px;
   right: 15px;
-  color: #CBD5E1;
+  color: #cbd5e1;
   cursor: pointer;
 }
 .register .register-right-part .form-container .form .checkbox {
@@ -482,11 +488,11 @@ button {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -550,16 +556,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -636,14 +643,15 @@ button {
   padding: 0 0 0 15px;
   transform: translateY(-10px);
 }
-.login .login-right-part .form-container .form .field, .login .login-right-part .form-container .form .field-password {
+.login .login-right-part .form-container .form .field,
+.login .login-right-part .form-container .form .field-password {
   position: relative;
 }
 .login .login-right-part .form-container .form .password-toggle svg {
   position: absolute;
   top: 20px;
   right: 15px;
-  color: #CBD5E1;
+  color: #cbd5e1;
   cursor: pointer;
 }
 .login .login-right-part .form-container .form input[type=submit] {
@@ -662,7 +670,7 @@ button {
   }
 }
 .login .login-right-part .form-container .form #lostPassword {
-  color: #9CA3AF;
+  color: #9ca3af;
   cursor: pointer;
   margin-top: 10px;
 }
@@ -677,11 +685,11 @@ button {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -745,16 +753,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -891,11 +900,11 @@ header .my-account-container .disconnect {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -959,16 +968,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -1024,11 +1034,11 @@ button {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -1092,16 +1102,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -1242,14 +1253,18 @@ button {
   padding-left: 7px;
   max-width: 37%;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-account-container .field, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field,
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password {
   position: relative;
 }
-.account-page .account-page-container .account-right-part .informations-part .form-account-container .field .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password .password-toggle svg, .account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password .password-toggle svg {
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field .password-toggle svg,
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field .password-toggle svg,
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password .password-toggle svg,
+.account-page .account-page-container .account-right-part .informations-part .form-account-container .field-password .password-toggle svg {
   position: absolute;
   top: 30%;
   right: 15px;
-  color: #CBD5E1;
+  color: #cbd5e1;
   cursor: pointer;
 }
 .account-page .account-page-container .account-right-part .informations-part .form-account-container .button-container {
@@ -1297,11 +1312,11 @@ button {
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -1365,16 +1380,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -1411,11 +1427,11 @@ main .main .game-part .informations-container .informations-right-part .history 
 
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 @font-face {
   font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 .light-theme {
   --backgroundColor: rgb(255, 247, 237);
@@ -1479,16 +1495,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {
@@ -1499,13 +1516,15 @@ button {
   cursor: pointer;
 }
 
-.login-right-part, .register-right-part {
+.login-right-part,
+.register-right-part {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.login-right-part h1, .register-right-part h1 {
+.login-right-part h1,
+.register-right-part h1 {
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: bold;
@@ -1514,13 +1533,15 @@ button {
   font-family: "font-1-bold", sans-serif;
 }
 @media screen and (max-width: 900px) {
-  .login-right-part h1, .register-right-part h1 {
+  .login-right-part h1,
+  .register-right-part h1 {
     margin-top: 30px;
     margin-bottom: 30px;
   }
 }
 @media screen and (max-height: 800px) {
-  .login-right-part h1, .register-right-part h1 {
+  .login-right-part h1,
+  .register-right-part h1 {
     margin-bottom: 15px;
   }
 }

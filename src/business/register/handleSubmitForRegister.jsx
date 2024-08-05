@@ -1,65 +1,76 @@
-import getUserAccountByUsernameController from "../../controllers/user/GetUserAccountByUsernameController.jsx";
-import loginUserController from "../../controllers/config/AuthController.jsx";
-import User from "../../models/User.jsx";
-import createUserAccountController from "../../controllers/user/CreateUserAccountController.jsx";
+import getUserAccountByUsernameController from '../../presentation/controllers/user/GetUserAccountByUsernameController.jsx';
+import loginUserController from '../../presentation/controllers/config/AuthController.jsx';
+import User from '../models/User.jsx';
+import createUserAccountController from '../../presentation/controllers/user/CreateUserAccountController.jsx';
 
 export const handleSubmitForRegister = async (
-    e,
+  e,
+  pseudo,
+  email,
+  password,
+  confirmPassword,
+  setError,
+  navigate,
+  setPseudo,
+  setEmail,
+  setPassword,
+  setConfirmPassword
+) => {
+  e.preventDefault();
+
+  if (password !== confirmPassword) {
+    setError('Les mots de passe ne correspondent pas.');
+    return;
+  }
+
+  const defaultAvatarId = 1;
+
+  const newUser = new User(
+    null,
     pseudo,
+    null,
     email,
     password,
-    confirmPassword,
-    setError,
-    navigate,
-    setPseudo,
-    setEmail,
-    setPassword,
-    setConfirmPassword
-) => {
-    e.preventDefault();
+    new Date(),
+    null,
+    { idImage: defaultAvatarId }
+  );
 
-    if (password !== confirmPassword) {
-        setError("Les mots de passe ne correspondent pas.");
-        return;
-    }
+  try {
+    await createUserAccountController(newUser);
 
-    const defaultAvatarId = 1;
-
-    const newUser = new User(
-        null,
-        pseudo,
-        null,
-        email,
-        password,
-        new Date(),
-        null,
-        { idImage: defaultAvatarId }
+    const user = new User(
+      null,
+      pseudo,
+      null,
+      email,
+      password,
+      null,
+      null,
+      null
     );
+    const response = await loginUserController(user);
 
-    try {
-        await createUserAccountController(newUser);
+    if (response && response.data) {
+      localStorage.setItem('token', response.data);
+      localStorage.setItem('username', pseudo);
 
-        const user = new User(null, pseudo, null, email, password, null, null, null);
-        const response = await loginUserController(user);
+      const userAccountId = await getUserAccountByUsernameController(pseudo);
+      localStorage.setItem('userAccountId', userAccountId);
 
-        if (response && response.data) {
-            localStorage.setItem('token', response.data);
-            localStorage.setItem('username', pseudo);
+      setPseudo('');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setError(null);
 
-            const userAccountId = await getUserAccountByUsernameController(pseudo);
-            localStorage.setItem('userAccountId', userAccountId);
-
-            setPseudo("");
-            setEmail("");
-            setPassword("");
-            setConfirmPassword("");
-            setError(null);
-
-            navigate('/home');
-        } else {
-            setError('Utilisateur non valide');
-        }
-    } catch (err) {
-        setError(err.message || 'Erreur lors de l\'inscription, veuillez réessayer.');
+      navigate('/home');
+    } else {
+      setError('Utilisateur non valide');
     }
+  } catch (err) {
+    setError(
+      err.message || "Erreur lors de l'inscription, veuillez réessayer."
+    );
+  }
 };

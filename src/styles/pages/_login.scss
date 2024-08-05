@@ -1,4 +1,4 @@
-@import "../settings.scss";
+@import '../settings.scss';
 
 .login {
   display: grid;
@@ -10,9 +10,7 @@
   }
 
   .login-right-part {
-
     .form-container {
-
       .form {
         display: flex;
         flex-direction: column;
@@ -69,7 +67,8 @@
           }
         }
 
-        .field, .field-password {
+        .field,
+        .field-password {
           position: relative;
         }
 
@@ -77,11 +76,11 @@
           position: absolute;
           top: 20px;
           right: 15px;
-          color: #CBD5E1;
+          color: #cbd5e1;
           cursor: pointer;
         }
 
-        input[type="submit"] {
+        input[type='submit'] {
           height: 65px;
           width: 200px;
           border-radius: 8px;
@@ -97,7 +96,7 @@
         }
 
         #lostPassword {
-          color: #9CA3AF;
+          color: #9ca3af;
           cursor: pointer;
           margin-top: 10px;
         }
@@ -109,7 +108,6 @@
     }
 
     p {
-
       #need-to-register {
         color: var(--tertiaryActionColor);
         font-weight: bold;

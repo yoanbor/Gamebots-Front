@@ -1,7 +1,6 @@
-@import "../settings.scss";
+@import '../settings.scss';
 
 .left-part {
-
   .img-avatars {
     position: absolute;
   }
@@ -11,7 +10,7 @@
     left: 35%;
 
     @media screen and (max-width: 1250px) {
-      display: none
+      display: none;
     }
   }
 
@@ -21,7 +20,7 @@
     transform: translateX(-50%);
 
     @media screen and (max-width: 1250px) {
-      display: none
+      display: none;
     }
   }
 
@@ -30,7 +29,7 @@
     left: 6%;
 
     @media screen and (max-width: 1250px) {
-      display: none
+      display: none;
     }
   }
 
@@ -39,7 +38,7 @@
     left: 3%;
 
     @media screen and (max-width: 1250px) {
-      display: none
+      display: none;
     }
   }
 
@@ -74,11 +73,11 @@
     left: 46px;
 
     @media screen and (max-width: 1250px) {
-      display: none
+      display: none;
     }
 
     @media screen and (max-height: 600px) {
-      display: none
+      display: none;
     }
   }
 
@@ -87,11 +86,11 @@
     left: 31%;
 
     @media screen and (max-width: 1250px) {
-      display: none
+      display: none;
     }
 
     @media screen and (max-height: 600px) {
-      display: none
+      display: none;
     }
   }
 
@@ -101,7 +100,8 @@
     align-items: flex-end;
   }
 
-  .img-gamebot, .message-user {
+  .img-gamebot,
+  .message-user {
     margin-right: 15px;
   }
 

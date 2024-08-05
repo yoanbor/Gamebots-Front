@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "font-1";
-  src: url(../assets/fonts/Play-Regular.ttf);
+  font-family: 'font-1';
+  src: url(assets/fonts/Play-Regular.ttf);
 }
 
 @font-face {
-  font-family: "font-1-bold";
-  src: url(../assets/fonts/Play-Bold.ttf);
+  font-family: 'font-1-bold';
+  src: url(assets/fonts/Play-Bold.ttf);
 }
 
 $primaryColor-Lowest: rgba(255, 247, 237, 1);
@@ -56,31 +56,31 @@ $dangerColor: rgba(153, 27, 27, 1);
   --linkColor: #{$secondaryColor-Low};
 }
 
-$displayFont-H1: "font-1-bold", sans-serif;
-$displayFont-H2: "font-1-bold", sans-serif;
-$displayFont-H3: "font-1-bold", sans-serif;
-$displayFont-H4: "font-1-bold", sans-serif;
-$displayFont-H5: "font-1-bold", sans-serif;
-$displayFont-H6: "font-1-bold", sans-serif;
+$displayFont-H1: 'font-1-bold', sans-serif;
+$displayFont-H2: 'font-1-bold', sans-serif;
+$displayFont-H3: 'font-1-bold', sans-serif;
+$displayFont-H4: 'font-1-bold', sans-serif;
+$displayFont-H5: 'font-1-bold', sans-serif;
+$displayFont-H6: 'font-1-bold', sans-serif;
 
-$headingFont-H1: "font-1-bold", sans-serif;
-$headingFont-H2: "font-1-bold", sans-serif;
-$headingFont-H3: "font-1-bold", sans-serif;
-$headingFont-H4: "font-1-bold", sans-serif;
-$headingFont-H5: "font-1-bold", sans-serif;
-$headingFont-H6: "font-1-bold", sans-serif;
+$headingFont-H1: 'font-1-bold', sans-serif;
+$headingFont-H2: 'font-1-bold', sans-serif;
+$headingFont-H3: 'font-1-bold', sans-serif;
+$headingFont-H4: 'font-1-bold', sans-serif;
+$headingFont-H5: 'font-1-bold', sans-serif;
+$headingFont-H6: 'font-1-bold', sans-serif;
 
-$textFont-Large: "font-1", sans-serif;
-$textFont-Medium: "font-1", sans-serif;
-$textFont-Small: "font-1", sans-serif;
-$textFont-Smaller: "font-1", sans-serif;
-$textFont-Smallest: "font-1", sans-serif;
+$textFont-Large: 'font-1', sans-serif;
+$textFont-Medium: 'font-1', sans-serif;
+$textFont-Small: 'font-1', sans-serif;
+$textFont-Smaller: 'font-1', sans-serif;
+$textFont-Smallest: 'font-1', sans-serif;
 
-$textBoldFont-Large: "font-1-bold", sans-serif;
-$textBoldFont-Medium: "font-1-bold", sans-serif;
-$textBoldFont-Small: "font-1-bold", sans-serif;
-$textBoldFont-Smaller: "font-1-bold", sans-serif;
-$textBoldFont-Smallest: "font-1-bold", sans-serif;
+$textBoldFont-Large: 'font-1-bold', sans-serif;
+$textBoldFont-Medium: 'font-1-bold', sans-serif;
+$textBoldFont-Small: 'font-1-bold', sans-serif;
+$textBoldFont-Smaller: 'font-1-bold', sans-serif;
+$textBoldFont-Smallest: 'font-1-bold', sans-serif;
 
 * {
   padding: 0;
@@ -114,16 +114,17 @@ p {
   color: var(--textColor);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--linkColor);
 }
 
 label {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 input {
-  border-color: #CBD5E1;
+  border-color: #cbd5e1;
 }
 
 li {

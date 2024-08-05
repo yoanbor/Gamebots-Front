@@ -1,0 +1,6 @@
+projectKey=gamebotsfront
+serverUrl=http://localhost:9000
+serverVersion=10.6.0.92116
+dashboardUrl=http://localhost:9000/dashboard?id=gamebotsfront
+ceTaskId=1c8af35a-3c28-4b8c-9b10-58e159d7c771
+ceTaskUrl=http://localhost:9000/api/ce/task?id=1c8af35a-3c28-4b8c-9b10-58e159d7c771
