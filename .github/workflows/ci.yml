@@ -52,7 +52,7 @@ jobs:
           password: ${{ secrets.CD_DOCKER_PASSWORD }}
 
       - name: Tag Docker image
-        run: docker tag gamebotsfrontimage:${{ github.sha }} ${{ secrets.CD_DOCKER_USERNAME }}/gamebotsfrontimage:${{ github.sha }}
+        run: docker tag gamebotsfrontimage:0.0.1 ${{ secrets.CD_DOCKER_USERNAME }}/gamebotsfrontimage:0.0.1
 
       - name: Push Docker image
-        run: docker push ${{ secrets.CD_DOCKER_USERNAME }}/gamebotsfrontimage:${{ github.sha }}
+        run: docker push ${{ secrets.CD_DOCKER_USERNAME }}/gamebotsfrontimage:0.0.1
