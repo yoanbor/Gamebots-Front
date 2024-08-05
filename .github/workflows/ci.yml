@@ -60,10 +60,10 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.CD_DOCKER_USERNAME }}/gamebotsfrontimage:${{ github.sha }}
+          tags: ${{ secrets.CD_DOCKER_USERNAME }}/gamebotsfrontimage:0.0.1
           labels: |
             org.opencontainers.image.source=${{ github.repository }}
-            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.revision=0.0.1
             org.opencontainers.image.created=${{ github.event.head_commit.timestamp }}
           build-args: |
             INCLUDE_MONGODBTOOLS=true
