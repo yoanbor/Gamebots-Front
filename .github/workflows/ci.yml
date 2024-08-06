@@ -49,10 +49,6 @@ jobs:
           username: ${{ secrets.CD_DOCKER_USERNAME }}
           password: ${{ secrets.CD_DOCKER_PASSWORD }}
 
-      - name: Extract Git metadata
-        id: meta
-        uses: actions/checkout@v3
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
@@ -65,6 +61,3 @@ jobs:
             org.opencontainers.image.source=${{ github.repository }}
             org.opencontainers.image.revision=0.0.1
             org.opencontainers.image.created=${{ github.event.head_commit.timestamp }}
-          build-args: |
-            INCLUDE_MONGODBTOOLS=true
-            PREINSTALL_LIBS=true
