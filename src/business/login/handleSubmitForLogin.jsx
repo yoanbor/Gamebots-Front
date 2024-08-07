@@ -1,4 +1,4 @@
-import User from '../models/User.jsx';
+import User from '../../models/User.jsx';
 import loginUserController from '../../presentation/controllers/config/AuthController.jsx';
 import getUserAccountByUsernameController from '../../presentation/controllers/user/GetUserAccountByUsernameController.jsx';
 

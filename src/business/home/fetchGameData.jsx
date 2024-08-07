@@ -1,7 +1,7 @@
 import getAllGamesController from '../../presentation/controllers/game/GetAllGamesController';
 import getImageBannerByGameIdController from '../../presentation/controllers/image/GetImageBannerByGameIdController';
-import Game from '../models/Game';
-import Image from '../models/Image';
+import Game from '../../models/Game.jsx';
+import Image from '../../models/Image.jsx';
 
 export const fetchGameData = async (setData, setError) => {
   try {

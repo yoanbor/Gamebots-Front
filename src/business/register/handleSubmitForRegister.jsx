@@ -1,6 +1,6 @@
 import getUserAccountByUsernameController from '../../presentation/controllers/user/GetUserAccountByUsernameController.jsx';
 import loginUserController from '../../presentation/controllers/config/AuthController.jsx';
-import User from '../models/User.jsx';
+import User from '../../models/User.jsx';
 import createUserAccountController from '../../presentation/controllers/user/CreateUserAccountController.jsx';
 
 export const handleSubmitForRegister = async (
