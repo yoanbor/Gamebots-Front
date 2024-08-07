@@ -67,7 +67,7 @@ const Header = ({ onSearch }) => {
               <p>Mon compte</p>
             </div>
             <button onClick={handleLogout} className="disconnect">
-              <img src="/icons/User-xuser.svg" alt="icon déconnexion" />
+              <img src="/src/styles/assets/icons/disconnect.svg" alt="icon déconnexion" />
               <p>Se déconnecter</p>
             </button>
           </div>
