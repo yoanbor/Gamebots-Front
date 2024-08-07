@@ -1,58 +1,20 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { MoonIcon } from '../styles/assets/icons/moon.jsx';
-import getUserAccountByUserIdController from '../presentation/controllers/user/GetUserAccountByUserIdController.jsx';
 import { SunMoonIcon } from '../styles/assets/icons/sun-moon.jsx';
+import { useTheme } from '../business/useTheme.js';
+import { useUserAvatar } from '../business/header/useUserAvatar.js';
+import { useAuth } from '../business/header/useAuth.js';
 
 const Header = ({ onSearch }) => {
   const navigate = useNavigate();
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const { theme, toggleTheme } = useTheme();
+  const { userAvatar, selectedAvatarId } = useUserAvatar();
+  const { handleLogout } = useAuth();
+
   const [searchTerm, setSearchTerm] = useState('');
-  const [userAvatar, setUserAvatar] = useState('');
-  const [selectedAvatarId, setSelectedAvatarId] = useState(null);
   const [isMyAccountVisible, setIsMyAccountVisible] = useState(false);
-
-  const fetchUserAvatar = useCallback(async () => {
-    try {
-      const userAccountId = localStorage.getItem('userAccountId');
-      if (userAccountId) {
-        const user = await getUserAccountByUserIdController(userAccountId);
-        if (user && user.image && user.image.source) {
-          setUserAvatar(user.image.source);
-          setSelectedAvatarId(user.image.idImage);
-        }
-      }
-    } catch (error) {
-      console.error(
-        "Erreur lors de la récupération de l'avatar utilisateur",
-        error
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchUserAvatar();
-
-    const handleAvatarUpdate = () => {
-      fetchUserAvatar();
-    };
-
-    window.addEventListener('avatarUpdated', handleAvatarUpdate);
-
-    return () => {
-      window.removeEventListener('avatarUpdated', handleAvatarUpdate);
-    };
-  }, [fetchUserAvatar]);
-
-  useEffect(() => {
-    document.body.className = theme === 'dark' ? 'dark-theme' : 'light-theme';
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-  };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -62,14 +24,7 @@ const Header = ({ onSearch }) => {
   };
 
   const toggleMyAccountContainer = () => {
-    setIsMyAccountVisible((prev) => !prev);
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('userAccountId');
-    localStorage.removeItem('username');
-    localStorage.removeItem('token');
-    navigate('/login');
+    setIsMyAccountVisible(prev => !prev);
   };
 
   const handleAccountClick = () => {
@@ -79,13 +34,13 @@ const Header = ({ onSearch }) => {
   return (
     <header>
       <div className="header-left-part">
-        <NavLink to={'/home'}>
+        <NavLink to={"/home"}>
           <img src="/Logo.svg" alt="logo Gamebots" />
           <h1>Gamebots</h1>
         </NavLink>
       </div>
       <div className="header-right-part">
-        <button id="switch-dark-light" onClick={toggleTheme}>
+        <button id="switch-dark-light" onClick={toggleTheme} aria-label="Toggle Theme">
           {theme === 'dark' ? <MoonIcon /> : <SunMoonIcon />}
         </button>
         <form>
