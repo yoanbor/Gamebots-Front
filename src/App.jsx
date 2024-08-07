@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PageError from './pages/PageError.jsx';
 import Login from './pages/Login.jsx';
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    const theme = localStorage.getItem('theme') || 'light';
+    document.body.className = theme === 'dark' ? 'dark-theme' : 'light-theme';
+  }, []);
+
   return <RouterProvider router={router} />;
 }
 
