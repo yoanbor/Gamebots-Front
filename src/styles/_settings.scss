@@ -39,6 +39,7 @@ $dangerColor: rgba(153, 27, 27, 1);
   --secondaryActionColor: #{$primaryColor-Lower};
   --tertiaryActionColor: #{$secondaryColor-Highter};
   --linkColor: #{$secondaryColor-Medium};
+  --backgroundColorGame: #{$secondaryColor-Medium};
 }
 
 .dark-theme {
@@ -54,6 +55,7 @@ $dangerColor: rgba(153, 27, 27, 1);
   --secondaryActionColor: #{$primaryColor-Lower};
   --tertiaryActionColor: #{$primaryColor-Low};
   --linkColor: #{$secondaryColor-Low};
+  --backgroundColorGame: #{$secondaryColor-Highter};
 }
 
 $displayFont-H1: 'font-1-bold', sans-serif;

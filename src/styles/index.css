@@ -19,6 +19,7 @@
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -34,6 +35,7 @@
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -110,6 +112,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -125,6 +128,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -328,6 +332,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -343,6 +348,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -507,6 +513,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -522,6 +529,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -704,6 +712,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -719,6 +728,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -919,6 +929,7 @@ header .my-account-container .disconnect {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -934,6 +945,7 @@ header .my-account-container .disconnect {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -1053,6 +1065,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -1068,6 +1081,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -1331,6 +1345,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -1346,6 +1361,7 @@ button {
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {
@@ -1406,23 +1422,97 @@ main .main {
   grid-template-columns: 1fr 2fr;
   height: 100vh;
 }
+main .main .game-part {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColorGame);
+}
+main .main .game-part img {
+  width: 100%;
+  height: 33%;
+  position: relative;
+  z-index: 1;
+}
+main .main .game-part h1 {
+  position: relative;
+  top: -7%;
+  left: 5%;
+  color: var(--backgroundColor);
+  z-index: 2;
+}
+main .main .game-part h2 {
+  position: relative;
+  top: -7%;
+  left: 5%;
+  color: var(--backgroundColor);
+  z-index: 2;
+}
 main .main .game-part .informations-container {
   display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 0 10px;
+}
+main .main .game-part .informations-container h3 {
+  color: var(--backgroundColor);
+}
+main .main .game-part .informations-container .informations-left-part {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main .main .game-part .informations-container .informations-left-part .informations {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 main .main .game-part .informations-container .informations-left-part .platform {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+main .main .game-part .informations-container .informations-left-part .platform h4 {
+  color: var(--backgroundColor);
 }
 main .main .game-part .informations-container .informations-left-part .numbersPlayers {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+main .main .game-part .informations-container .informations-left-part .numbersPlayers h4 {
+  color: var(--backgroundColor);
 }
 main .main .game-part .informations-container .informations-left-part .releaseDate {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+main .main .game-part .informations-container .informations-left-part .releaseDate h4 {
+  color: var(--backgroundColor);
+}
+main .main .game-part .informations-container .informations-right-part {
+  width: 50%;
 }
 main .main .game-part .informations-container .informations-right-part .history {
   display: flex;
+  margin-bottom: 30px;
+  flex-direction: row;
+  gap: 5px;
+}
+main .main .game-part .informations-container .informations-right-part .history h4 {
+  color: var(--backgroundColor);
+}
+main .main .game-part .informations-container .informations-right-part p {
+  color: var(--backgroundColor);
+}
+main .main .game-part .game-images {
+  position: relative;
+  display: flex;
+  height: 70%;
+  gap: 10px;
+  align-items: center;
+  margin-left: 10px;
 }
 
 @font-face {
@@ -1446,6 +1536,7 @@ main .main .game-part .informations-container .informations-right-part .history 
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(8, 51, 68);
   --linkColor: rgb(21, 94, 117);
+  --backgroundColorGame: rgb(21, 94, 117);
 }
 
 .dark-theme {
@@ -1461,6 +1552,7 @@ main .main .game-part .informations-container .informations-right-part .history 
   --secondaryActionColor: rgb(255, 237, 213);
   --tertiaryActionColor: rgb(253, 186, 116);
   --linkColor: rgb(8, 145, 178);
+  --backgroundColorGame: rgb(8, 51, 68);
 }
 
 * {

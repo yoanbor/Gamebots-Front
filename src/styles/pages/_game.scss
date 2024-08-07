@@ -7,32 +7,115 @@ main {
     height: 100vh;
 
     .game-part {
+
+      display: flex;
+      flex-direction: column;
+      background-color: var(--backgroundColorGame);
+
+      img {
+        width: 100%;
+        height: 33%;
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        position: relative;
+        top: -7%;
+        left: 5%;
+        color: var(--backgroundColor);
+        z-index: 2;
+      }
+
+      h2 {
+        position: relative;
+        top: -7%;
+        left: 5%;
+        color: var(--backgroundColor);
+        z-index: 2;
+      }
+
       .informations-container {
         display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0 10px;
+
+        h3 {
+            color: var(--backgroundColor);
+        }
 
         .informations-left-part {
+
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
           .informations {
             display: flex;
+            flex-direction: row;
+            gap: 5px;
           }
 
           .platform {
             display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            h4 {
+              color: var(--backgroundColor);
+            }
           }
 
           .numbersPlayers {
             display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            h4 {
+              color: var(--backgroundColor);
+            }
           }
 
           .releaseDate {
             display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            h4 {
+              color: var(--backgroundColor);
+            }
           }
         }
 
         .informations-right-part {
+
+          width: 50%;
+
           .history {
             display: flex;
+            margin-bottom: 30px;
+            flex-direction: row;
+            gap: 5px;
+
+            h4 {
+              color: var(--backgroundColor);
+            }
+          }
+          p  {
+            color: var(--backgroundColor);
           }
         }
+      }
+
+      .game-images {
+        position: relative;
+        display: flex;
+        height: 70%;
+        gap: 10px;
+        align-items: center;
+        margin-left: 10px;
       }
     }
   }
