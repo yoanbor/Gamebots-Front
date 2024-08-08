@@ -2,7 +2,7 @@ import getAllImagesByGameId from '../../../services/image/GetAllImagesByGameIdSe
 
 const getAllImagesByGameIdController = async (gameId) => {
   try {
-    return getAllImagesByGameId(gameId);
+    return await getAllImagesByGameId(gameId);
   } catch (error) {
     console.log("Erreur lors de la récupération des images par l'id du jeu");
     throw error;
