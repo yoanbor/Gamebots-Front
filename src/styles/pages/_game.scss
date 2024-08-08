@@ -7,7 +7,6 @@ main {
     height: 100vh;
 
     .game-part {
-
       display: flex;
       flex-direction: column;
       background-color: var(--backgroundColorGame);
@@ -19,15 +18,7 @@ main {
         z-index: 1;
       }
 
-      h1 {
-        position: relative;
-        top: -7%;
-        left: 5%;
-        color: var(--backgroundColor);
-        z-index: 2;
-      }
-
-      h2 {
+      h1, h2 {
         position: relative;
         top: -7%;
         left: 5%;
@@ -42,43 +33,19 @@ main {
         padding: 0 10px;
 
         h3 {
-            color: var(--backgroundColor);
+          color: var(--backgroundColor);
+        }
+
+        .informations-left-part, .informations-right-part {
+          width: 50%;
         }
 
         .informations-left-part {
-
-          width: 50%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
 
-          .informations {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-          }
-
-          .platform {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-
-            h4 {
-              color: var(--backgroundColor);
-            }
-          }
-
-          .numbersPlayers {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-
-            h4 {
-              color: var(--backgroundColor);
-            }
-          }
-
-          .releaseDate {
+          .informations, .platform, .numbersPlayers, .releaseDate {
             display: flex;
             flex-direction: row;
             gap: 5px;
@@ -89,33 +56,77 @@ main {
           }
         }
 
-        .informations-right-part {
+        .history {
+          display: flex;
+          margin-bottom: 30px;
+          flex-direction: row;
+          gap: 5px;
 
-          width: 50%;
-
-          .history {
-            display: flex;
-            margin-bottom: 30px;
-            flex-direction: row;
-            gap: 5px;
-
-            h4 {
-              color: var(--backgroundColor);
-            }
-          }
-          p  {
+          h4 {
             color: var(--backgroundColor);
           }
         }
+
+        p {
+          color: var(--backgroundColor);
+        }
       }
 
-      .game-images {
-        position: relative;
+      .carousel-container-conversation {
         display: flex;
-        height: 70%;
-        gap: 10px;
+        justify-content: center;
         align-items: center;
-        margin-left: 10px;
+        margin-top: 20px;
+
+        .image-carousel {
+          overflow-x: hidden !important;
+          position: relative;
+          width: 100%;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+
+          .image-carousel::-webkit-scrollbar {
+            display: none;
+          }
+
+          .image-carousel-inner {
+            display: flex;
+            transition: transform 0.3s ease;
+            gap: 5px;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 100%;
+          }
+
+          .carousel-image-container {
+            position: relative;
+            height: 300px;
+            flex: 0 0 75%;
+            max-width: 100%;
+            border-radius: 4%;
+            overflow: hidden;
+            margin: 0 5px;
+          }
+
+          .carousel-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4%;
+          }
+
+          .image-overlay {
+            position: absolute;
+            bottom: 70px;
+            left: 30%;
+            width: 40%;
+            height: 1%;
+            background-color: white;
+            border-radius: 4%;
+            pointer-events: none;
+          }
+        }
       }
     }
   }

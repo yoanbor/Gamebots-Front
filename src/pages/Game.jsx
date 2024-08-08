@@ -1,13 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import getGameByGameId from '../services/game/GetGameByGameIdService.jsx';
 import getImageBannerByGameIdController from '../presentation/controllers/image/GetImageBannerByGameIdController';
-import getAllImagesByGameIdController from '../services/image/GetAllImagesByGameIdService.jsx';
+import getAllImagesByGameIdController from '../presentation/controllers/image/GetAllImagesByGameIdController.jsx';
 import { BadgeInfoIcon } from '../styles/assets/icons/badge-info.jsx';
 import { PlaystationIcon } from '../styles/assets/icons/playstation.jsx';
 import { PersonStandingIcon } from '../styles/assets/icons/person-standing.jsx';
 import { CalendarDaysIcon } from '../styles/assets/icons/calendar-days.jsx';
 import { BookOpenIcon } from '../styles/assets/icons/book-open.jsx';
+import Carousel from '../components/Carousel.jsx';
+import getGameByGameIdController from '../presentation/controllers/game/GetGameByGameIdController.jsx';
 
 const Game = () => {
   const { id } = useParams();
@@ -19,15 +20,15 @@ const Game = () => {
   useEffect(() => {
     const fetchGame = async () => {
       try {
-        const gameData = await getGameByGameId(id);
+        const [gameData, bannerImages, gameImages] = await Promise.all([
+          getGameByGameIdController(id),
+          getImageBannerByGameIdController(id),
+          getAllImagesByGameIdController(id)
+        ]);
         setGame(gameData);
-
-        const bannerImages = await getImageBannerByGameIdController(id);
         if (bannerImages && bannerImages.length > 0) {
           setBannerImage(bannerImages[0].source);
         }
-
-        const gameImages = await getAllImagesByGameIdController(id);
         setImages(gameImages);
       } catch (err) {
         setError(err);
@@ -41,7 +42,7 @@ const Game = () => {
       {error && (
         <div>Erreur lors de la récupération des données : {error.message}</div>
       )}
-      {game ? (
+      {game && game.title ? (
         <div className="main">
           <div className="game-part">
             {bannerImage ? (
@@ -85,19 +86,8 @@ const Game = () => {
                 <p>{game.story}</p>
               </div>
             </div>
-            <div className="game-images">
-              {images.length > 0 ? (
-                images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image.source}
-                    alt={`Image du jeu ${game.title} ${index}`}
-                    className="game-image"
-                  />
-                ))
-              ) : (
-                <div>Aucune image disponible</div>
-              )}
+            <div className="carousel-container-conversation">
+              <Carousel images={images} />
             </div>
           </div>
         </div>

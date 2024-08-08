@@ -1433,14 +1433,7 @@ main .main .game-part img {
   position: relative;
   z-index: 1;
 }
-main .main .game-part h1 {
-  position: relative;
-  top: -7%;
-  left: 5%;
-  color: var(--backgroundColor);
-  z-index: 2;
-}
-main .main .game-part h2 {
+main .main .game-part h1, main .main .game-part h2 {
   position: relative;
   top: -7%;
   left: 5%;
@@ -1456,63 +1449,83 @@ main .main .game-part .informations-container {
 main .main .game-part .informations-container h3 {
   color: var(--backgroundColor);
 }
-main .main .game-part .informations-container .informations-left-part {
+main .main .game-part .informations-container .informations-left-part, main .main .game-part .informations-container .informations-right-part {
   width: 50%;
+}
+main .main .game-part .informations-container .informations-left-part {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main .main .game-part .informations-container .informations-left-part .informations {
+main .main .game-part .informations-container .informations-left-part .informations, main .main .game-part .informations-container .informations-left-part .platform, main .main .game-part .informations-container .informations-left-part .numbersPlayers, main .main .game-part .informations-container .informations-left-part .releaseDate {
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
-main .main .game-part .informations-container .informations-left-part .platform {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-main .main .game-part .informations-container .informations-left-part .platform h4 {
+main .main .game-part .informations-container .informations-left-part .informations h4, main .main .game-part .informations-container .informations-left-part .platform h4, main .main .game-part .informations-container .informations-left-part .numbersPlayers h4, main .main .game-part .informations-container .informations-left-part .releaseDate h4 {
   color: var(--backgroundColor);
 }
-main .main .game-part .informations-container .informations-left-part .numbersPlayers {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-main .main .game-part .informations-container .informations-left-part .numbersPlayers h4 {
-  color: var(--backgroundColor);
-}
-main .main .game-part .informations-container .informations-left-part .releaseDate {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-main .main .game-part .informations-container .informations-left-part .releaseDate h4 {
-  color: var(--backgroundColor);
-}
-main .main .game-part .informations-container .informations-right-part {
-  width: 50%;
-}
-main .main .game-part .informations-container .informations-right-part .history {
+main .main .game-part .informations-container .history {
   display: flex;
   margin-bottom: 30px;
   flex-direction: row;
   gap: 5px;
 }
-main .main .game-part .informations-container .informations-right-part .history h4 {
+main .main .game-part .informations-container .history h4 {
   color: var(--backgroundColor);
 }
-main .main .game-part .informations-container .informations-right-part p {
+main .main .game-part .informations-container p {
   color: var(--backgroundColor);
 }
-main .main .game-part .game-images {
-  position: relative;
+main .main .game-part .carousel-container-conversation {
   display: flex;
-  height: 70%;
-  gap: 10px;
+  justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-top: 20px;
+}
+main .main .game-part .carousel-container-conversation .image-carousel {
+  overflow-x: hidden !important;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+main .main .game-part .carousel-container-conversation .image-carousel .image-carousel::-webkit-scrollbar {
+  display: none;
+}
+main .main .game-part .carousel-container-conversation .image-carousel .image-carousel-inner {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+main .main .game-part .carousel-container-conversation .image-carousel .carousel-image-container {
+  position: relative;
+  height: 300px;
+  flex: 0 0 75%;
+  max-width: 100%;
+  border-radius: 4%;
+  overflow: hidden;
+  margin: 0 5px;
+}
+main .main .game-part .carousel-container-conversation .image-carousel .carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4%;
+}
+main .main .game-part .carousel-container-conversation .image-carousel .image-overlay {
+  position: absolute;
+  bottom: 70px;
+  left: 30%;
+  width: 40%;
+  height: 1%;
+  background-color: white;
+  border-radius: 4%;
+  pointer-events: none;
 }
 
 @font-face {
