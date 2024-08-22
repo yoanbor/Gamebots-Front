@@ -2,25 +2,25 @@ const RegisterAndLoginLeftPart = () => {
   return (
     <div className="left-part">
       <img
-        src={'../../public/avatars/AvatarBang.png'}
+        src={'../../public/avatars/AvatarBang.webp'}
         id={'avatar-Bangalore'}
         className={'img-avatars'}
         alt="Avatar Bangalor"
       />
       <img
-        src={'../../public/avatars/AvatarBlood.png'}
+        src={'../../public/avatars/AvatarBlood.webp'}
         id={'avatar-Bloodhunt'}
         className={'img-avatars'}
         alt="Avatar Bloodhunt"
       />
       <img
-        src={'../../public/avatars/AvatarLifeline.png'}
+        src={'../../public/avatars/AvatarLifeline.webp'}
         id={'avatar-Lifeline'}
         className={'img-avatars'}
         alt="Avatar Lifeline"
       />
       <img
-        src={'../../public/avatars/AvatarPath.png'}
+        src={'../../public/avatars/AvatarPath.webp'}
         id={'avatar-Pathfinder'}
         className={'img-avatars'}
         alt="Avatar Pathfinder"
@@ -53,7 +53,7 @@ const RegisterAndLoginLeftPart = () => {
         </div>
         <div className={'img-user'}>
           <img
-            src={'../../public/avatars/AvatarPath.png'}
+            src={'../../public/avatars/AvatarPath.webp'}
             id={'logo-msg'}
             alt="Avatar Pathflinder"
           />
